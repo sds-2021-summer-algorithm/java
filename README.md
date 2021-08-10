@@ -46,3 +46,12 @@
         </td>
     </tr>
 </table>
+
+
+<br>
+<hr>
+<br>
+
+|Problem|Level|Solution|김가은|김지원|yukyeongmin|yess98|최하라|황정훈|
+|-------|:---:|:------:|:---:|:---:|:---:|:---:|:---:|:---:|
+|[단절선](https://www.acmicpc.net/problem/11400)|P5|[Here](./solution/BOJ_11400_단절선)| - | - | - | - | - | - |
