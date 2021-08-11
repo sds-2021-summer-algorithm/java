@@ -12,7 +12,7 @@
 
 ### 매주 금요일 09:00 AM ~ 11:00 AM 스터디 진행
 
-### Member
+<!-- ### Member
 
 <table>
     <tr align="center">
@@ -45,21 +45,21 @@
             </a>
         </td>
     </tr>
-</table>
+</table> -->
 
-<!-- ### Contributor
+### Contributor
 
 **김가은** [![Git Badge](http://img.shields.io/badge/-Github-black?style=flat-square&logo=github)](https://github.com/blingaeun) | 
 **김지원** [![Git Badge](http://img.shields.io/badge/-Github-black?style=flat-square&logo=github)](https://github.com/kl529) | 
 **yukyeongmin** [![Git Badge](http://img.shields.io/badge/-Github-black?style=flat-square&logo=github)](https://github.com/yukyeongmin) | 
 **yess98** [![Git Badge](http://img.shields.io/badge/-Github-black?style=flat-square&logo=github)](https://github.com/yess98) | 
 **최하라** [![Git Badge](http://img.shields.io/badge/-Github-black?style=flat-square&logo=github)](https://github.com/harachoi) | 
-**황정훈** [![Git Badge](http://img.shields.io/badge/-Github-black?style=flat-square&logo=github)](https://github.com/wjdgns7712) -->
+**황정훈** [![Git Badge](http://img.shields.io/badge/-Github-black?style=flat-square&logo=github)](https://github.com/wjdgns7712)
 
 <br>
 <hr>
 <br>
 
-|Problem|Level|Solution|김가은|김지원|yukyeongmin|yess98|최하라|황정훈|
+|Problem|Level|Solution|김가은|김지원|유경민|yess98|최하라|황정훈|
 |-------|:---:|:------:|:---:|:---:|:---:|:---:|:---:|:---:|
-|[단절선](https://www.acmicpc.net/problem/11400)|P5|[Here](./solution/BOJ_11400_단절선)| - | - | - | - | - | - |
+|[단절선](https://www.acmicpc.net/problem/11400)|P5|[Here](./solution/BOJ_11400_단절선)| - | - | - | - | - | O |
