@@ -51,8 +51,8 @@
 
 **김가은** [![Git Badge](http://img.shields.io/badge/-Github-black?style=flat-square&logo=github)](https://github.com/blingaeun) | 
 **김지원** [![Git Badge](http://img.shields.io/badge/-Github-black?style=flat-square&logo=github)](https://github.com/kl529) | 
-**yukyeongmin** [![Git Badge](http://img.shields.io/badge/-Github-black?style=flat-square&logo=github)](https://github.com/yukyeongmin) | 
-**yess98** [![Git Badge](http://img.shields.io/badge/-Github-black?style=flat-square&logo=github)](https://github.com/yess98) | 
+**양은서** [![Git Badge](http://img.shields.io/badge/-Github-black?style=flat-square&logo=github)](https://github.com/yess98) | 
+**유경민** [![Git Badge](http://img.shields.io/badge/-Github-black?style=flat-square&logo=github)](https://github.com/yukyeongmin) | 
 **최하라** [![Git Badge](http://img.shields.io/badge/-Github-black?style=flat-square&logo=github)](https://github.com/harachoi) | 
 **황정훈** [![Git Badge](http://img.shields.io/badge/-Github-black?style=flat-square&logo=github)](https://github.com/wjdgns7712)
 
@@ -60,6 +60,6 @@
 <hr>
 <br>
 
-|Problem|Level|Solution|김가은|김지원|유경민|yess98|최하라|황정훈|
+|Problem|Level|Solution|김가은|김지원|양은서|유경민|최하라|황정훈|
 |-------|:---:|:------:|:---:|:---:|:---:|:---:|:---:|:---:|
 |[단절선](https://www.acmicpc.net/problem/11400)|P5|[Here](./solution/BOJ_11400_단절선)| - | - | O | O | O | O |
