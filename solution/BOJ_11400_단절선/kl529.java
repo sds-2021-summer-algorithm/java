@@ -1,5 +1,3 @@
-package com.company;
-
 // 코드 작성
 // 이해
 // 손글씨 정리
