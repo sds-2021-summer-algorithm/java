@@ -97,4 +97,4 @@
 
 |Problem|Level|Solution|김가은|김지원|양은서|유경민|최하라|황정훈|
 |-------|:---:|:------:|:---:|:---:|:---:|:---:|:---:|:---:|
-|[구슬 탈출2](https://www.acmicpc.net/problem/11400)|G2|[Here](./solution/BOJ_13460_구슬 탈출2)| - | - | - | - | - | - |
+|[구슬 탈출2](https://www.acmicpc.net/problem/13460)|G2|[Here](./solution/BOJ_13460_구슬 탈출2)| - | - | - | - | - | - |
