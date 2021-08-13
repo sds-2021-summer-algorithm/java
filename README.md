@@ -90,7 +90,7 @@
 
 |Problem|Level|Solution|김가은|김지원|양은서|유경민|최하라|황정훈|
 |-------|:---:|:------:|:---:|:---:|:---:|:---:|:---:|:---:|
-|[스타트와 링크](https://www.acmicpc.net/problem/14889)|S3|[Here](./solution/BOJ_14889_스타트와 링크)| - | - | - | - | - | - |
+|[스타트와 링크](https://www.acmicpc.net/problem/14889)|S3|[Here](./solution/BOJ_11400_단절선)| - | - | - | - | - | - |
 
 <br>
 <br>
