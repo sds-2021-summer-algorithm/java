@@ -1,10 +1,14 @@
+package P2042;
+
+import java.io.*;
+import java.util.*;
+
 import java.io.*;
 import java.util.*;
 
 public class Main {
 	
 	static int N, M, K;
-	static int a, b, c; // b번째 수를 c로 바꿈
 	static long[] nums;
 	static long[] tree;
 	static int S;
@@ -18,11 +22,11 @@ public class Main {
         M = Integer.parseInt(st.nextToken());
         K = Integer.parseInt(st.nextToken());
         
-        nums = new long[N];
+        nums = new long[N + 1];
         
+
         for (int i = 0; i < N; i++) {
-            st = new StringTokenizer(br.readLine());
-        	nums[i] = Integer.parseInt(st.nextToken());
+        	nums[i] = Long.parseLong(br.readLine());
         }
         
         S = 1; //S는 leaf 의 시작
@@ -33,28 +37,28 @@ public class Main {
         
         init();
         
-        StringBuilder sb = new StringBuilder();
+        
+
         for (int i = 0; i < M+K; i ++) {
             st = new StringTokenizer(br.readLine());
-        	a = Integer.parseInt(st.nextToken());
-        	b = Integer.parseInt(st.nextToken());
-        	c = Integer.parseInt(st.nextToken());
-        	
+        	int a = Integer.parseInt(st.nextToken());
+      	
         	
         	if (a == 1) { // 변경을 하고 싶다면
-        		nums[b] = c;
+            	int b = Integer.parseInt(st.nextToken());
+            	long c = Long.parseLong(st.nextToken()); // a == 1인 경우 b번째 자리를 c로 바꾸라는 건데 c의 범위가 int 를 벗어날 수도 있음 (100%에서 Numberformat 에러 발생)
         		update(b, c);
-        		break;
-
+        		
         	}
         	else if (a ==2) { // 구간합을 구하고 싶으면
-        		sb.append(query(b,c)).append("\n");
-        		break;
+            	int b = Integer.parseInt(st.nextToken());
+            	int c = Integer.parseInt(st.nextToken());
+        		System.out.println(query(b,c));
 
         	}
         }
         
-        bw.write(sb.toString());
+
 		bw.flush();
 		bw.close();
 		br.close();
@@ -75,16 +79,16 @@ public class Main {
 	
 	// left, right : 실제 노드 번호
 	//queryleft, queryright : 구간 합을 구하고 싶은 범위
-	static int query(int queryleft, int queryright) {
+	static long query(int queryleft, int queryright) {
 		int left = S + queryleft - 1;
 		int right = S + queryright - 1;
-		int sum = 0;
+		long sum = 0;
 		while (left <= right) {
 			// 좌측 노드가 홀수이면 현재 노드 값 사용하고 한칸 옆으로
 			if (left %2 == 1) {
 				sum += tree[left++];
 			}
-			//우측 노드가 홀수이면 현재 노드 값 사용하고 한칸 옆으로
+			//우측 노드가 짝수이면 현재 노드 값 사용하고 한칸 옆으로
 			if (right %2 == 0) {
 				sum += tree[right--];
 			}
@@ -97,7 +101,7 @@ public class Main {
 	}
 	
 	
-	static void update(int target, int value) {
+	static void update(int target, long value) {
 		int node = S + target - 1; // 3번째를 바꾸고 싶으면 리프시작노드 + 3 - 1;
 		// 값을 변경
 		tree[node] = value;
@@ -106,7 +110,6 @@ public class Main {
 		while (node > 0) {
 			tree[node] = tree[node*2] + tree[node*2 + 1];
 			node /=2;
-			break;
 		}
 		
 	}
