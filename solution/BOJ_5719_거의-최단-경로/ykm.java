@@ -1,4 +1,3 @@
-package P5719;
 import java.io.*;
 import java.util.*;
 
@@ -6,18 +5,19 @@ public class Main {
     static final int INF = 20000000;
     static int V; // 500
     static int E; // 10000
-    static int [][] edges; // 인접행렬
-    static int start;
-    static int end;
+    static ArrayList<Edge>[] edges; // 인접 리스트
 
-    static PriorityQueue<Edge> pq = new PriorityQueue<Edge>(); // 다익스트라를 위한 우선순위 큐
+    static PriorityQueue<Edge> pq = new PriorityQueue<>(); // 다익스트라를 위한 우선순위 큐
     static int[] min; // 각 node까지 최단거리 저장용
-    static ArrayList[] prev; // 직전 방문노드 저장
-    static boolean[] check; // 방문여부 확인
+
+    static boolean[][] isShortest;
+    static ArrayList<Integer>[] prev; // 직전 방문노드 저장
+    
     public static void main(String[] args) throws IOException{
         System.setIn(new FileInputStream("P5719/input.txt"));
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        StringBuilder sb = new StringBuilder();
 
         while(true){
             StringTokenizer st = new StringTokenizer(br.readLine());
@@ -26,19 +26,19 @@ public class Main {
 
             if(V==0 && E==0) break;
 
-            edges = new int[V][V];
+            edges = new ArrayList[V];
+            isShortest = new boolean[V][V];
             min = new int[V]; 
             prev = new ArrayList[V];
-            check = new boolean[V];
-            for(int i = 0; i<V ; i++){
-                min[i]= INF;
-                check[i] = false;
-                //prev[i] = new ArrayList<Integer>(); // 직전에 방문한 노드 저장용
+
+            for(int i = 0 ; i<V ; i++){
+                edges[i] = new ArrayList<Edge>();
+                prev[i] = new ArrayList<Integer>();
             }
 
             st = new StringTokenizer(br.readLine());
-            start = Integer.parseInt(st.nextToken());
-            end = Integer.parseInt(st.nextToken());
+            int start = Integer.parseInt(st.nextToken());
+            int end = Integer.parseInt(st.nextToken());
 
             // 간선 입력받기
             for(int i = 0 ; i<E ; i++){
@@ -47,89 +47,75 @@ public class Main {
                 int to = Integer.parseInt(st.nextToken());
                 int cost = Integer.parseInt(st.nextToken());
 
-                edges[from][to] = cost;
+                edges[from].add(new Edge(to,cost));
             }
 
-            // 첫번째 다익스트라 준비
-            min[start] = 0;
-            pq.add(new Edge(start,0));
-
-            while(!pq.isEmpty()){
-                // 1. 체크인
-                // 2. 목적지 인가
-                // 3. 연결된 노드
-                // 4. 조건 확인
-                // 5. 방문
-                // 6. 체크아웃
-
-                Edge current = pq.poll();
-
-                // 절대 업데이트가 안되는 경우 가지치기
-                if(current.to == end) continue;
-                if(current.cost > min[current.to]) continue;
-
-                for(int j = 0 ; j<V; j++){
-                    if (edges[current.to][j]==0) continue;
-                    
-                    Edge next = new Edge(j, edges[current.to][j]);
-
-                    //최단경로로 업데이트 가능한지 확인
-                    int sum = min[current.to] + next.cost;
-                    if( min[next.to] > sum){
-                        min[next.to] = sum;
-                        prev[next.to] = new ArrayList<Integer>(); // 이전에 저장된 경로 제거 필요
-                        prev[next.to].add(current.to);
-                        pq.add(next);
-                    }else if(min[next.to] == sum){
-                        // 최단 경로가 여러개인 경우도 고려해야함.
-                        // 업데이트는 필요없지만 경로저장은 필요
-                        prev[next.to].add(current.to);
-                    }
-                }
-            }
-
+            // 첫번째 다익스트라
+            Dij(start, end);
             // prev를 역으로 따라가면서 사용된 간선 제거
-            deleteEdge(end);
+            deleteEdge(end, start);
+            // 두번째 다익스트라
+            Dij(start, end);
 
-            // 두번째 다익스트라 준비
-            for(int j = 0 ; j<V; j++){
-                check[j]=false;
-                min[j] = INF; // 최단거리 저장용
-            }
-
-            min[start] = 0;
-            pq.add(new Edge(start,0));
-
-            while(!pq.isEmpty()){
-                // 위와 같은 방식으로 다익스트라 한번더
-                Edge current = pq.poll();
-
-                if(current.cost > min[current.to]) continue;
-                check[current.to] = true;
-
-                for(int j = 0 ; j<V; j++){
-                    if(edges[current.to][j]==0) continue;
-
-                    Edge next = new Edge(j,edges[current.to][j]);
-
-                    if(check[next.to]) continue;
-
-                    //최단경로로 업데이트 가능한지 확인
-                    int sum = min[current.to] + next.cost;
-                    if( min[next.to] > sum){
-                        min[next.to] = sum;
-                        pq.add(next);
-                    }
-                }
-            }
-
-            if(min[end]==INF) bw.write(-1+"\n");
-            else bw.write(min[end]+"\n");
+            if(min[end]==INF) sb.append(-1+"\n");
+            else sb.append(min[end]+"\n");
         }
+        bw.write(sb.toString());
         bw.flush();
         bw.close();
         br.close();
     } 
+
+    public static void Dij(int start, int end){
+        for(int i = 0 ; i<V ; i++){
+            min[i] = INF;
+        }
+        min[start] = 0;
+        pq.add(new Edge(start,0));
+
+        // 1. 큐에서 꺼내기
+        // 2. 목적지 확인
+        // 3. 갈수있는곳
+        // 4. 조건확인
+        // 5. 체크인
+        // 6. 큐에 넣기
+        while(!pq.isEmpty()){
+            Edge current = pq.poll();
+            
+            //업데이트가 불가능한 경우 제외
+            if(min[current.to] < current.cost) continue;
+            if(current.to==end) continue;
+
+            for(int i = 0 ; i < edges[current.to].size() ; i++ ){
+                Edge next = edges[current.to].get(i);
+
+                if(isShortest[current.to][next.to]) continue;
+
+                int sum = current.cost + next.cost;
+                if(min[next.to]> sum){
+                    min[next.to] = sum; // 더짧은 경로 발견시 업데이트
+                    prev[next.to].clear();
+                    prev[next.to].add(current.to);
+                    pq.offer( new Edge(next.to, min[next.to]));
+                }else if(min[next.to] == sum){
+                    prev[next.to].add(current.to);
+                }
+            }
+        }
+    }
+    
+    // end부터 사용된 간선표시
+    public static void deleteEdge(int parent, int start){
+        if(parent== start) return;
+        for(int i = 0 ; i < prev[parent].size(); i++){
+            int a = (int) prev[parent].get(i);
+            
+            if(!isShortest[a][parent]){ // 포인트 -> 이미 true이면 호출하지 말자
+                isShortest[a][parent] = true;
+                deleteEdge(a, start);
+            }
+        }
+    }
     
     public static class Edge implements Comparable<Edge>{
         int to;
@@ -149,16 +135,5 @@ public class Main {
         public String toString() {
             return "cost [cost=" + cost + ", to=" + to + "]";
         }        
-    }
-
-    // end부터 사용된 간선 제거
-    public static void deleteEdge(int b){
-        if(b== start) return;
-        for(int i = 0 ; i < prev[b].size(); i++){
-            int a = (int) prev[b].get(i);
-            
-            edges[a][b] = 0;
-            deleteEdge(a);
-        }
     }
 }
