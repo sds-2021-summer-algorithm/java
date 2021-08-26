@@ -2,6 +2,7 @@ import java.io.*;
 import java.util.*;
 
 public class Main {
+
     static int N, M, maxArea;
     static int[][] origin;
     static int[][] wallMap;
