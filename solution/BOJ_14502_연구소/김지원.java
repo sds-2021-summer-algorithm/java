@@ -12,7 +12,7 @@ public class Main {
     static int[][] virus_map;
     static int[] dx = {-1,1,0,0}; //상하좌우
     static int[] dy = {0,0,-1,1};
-    static int safe_count;
+    static int safe_count = 0;
 
     static class virus {
         int x,y;
@@ -28,7 +28,6 @@ public class Main {
         n = Integer.parseInt(st.nextToken());
         m = Integer.parseInt(st.nextToken());
         map = new int[n][m];
-        safe_count = 0; //안전구간
 
         //데이터 입력받기
         for (int i = 0; i < n; i++) {
@@ -38,40 +37,35 @@ public class Main {
             }
         }
 
-        dfs(0); //dfs 바로 돌리기
 
-        //확인
-        for (int i = 0; i < n; i++) {
-            for (int j = 0; j < m; j++) {
-                System.out.print(virus_map[i][j] + " ");
-            }
-            System.out.println();
-        }
-
-//        //안전구간 갯수 카운트
+//        //확인
 //        for (int i = 0; i < n; i++) {
 //            for (int j = 0; j < m; j++) {
-//                if (virus_map[i][j] == 0){
-//                    safe_count++;
-//                }
+//                System.out.print(virus_map[i][j] + " ");
 //            }
+//            System.out.println();
 //        }
+        dfs(0);
+        //안전구간 갯수 카운트
         System.out.println(safe_count);
 
     }
 
     private static void dfs(int dep) {
         if (dep == 3){ //벽 세개 세웠으면 이제 바이러스가 움직임
-            bfs(); //
+             //
+            bfs();
             return;
         }
         //백트래킹
-        for(int i =0; i < n; i++){
-            for (int j=0; j < m; j++){
-                if (map[i][j] == 0) { //빈공간이면
-                    map[i][j] = 1;
-                    dfs(dep +1); //백트래킹
-                    map[i][j] = 0;
+        else{
+            for(int i =0; i < n; i++){
+                for (int j=0; j < m; j++){
+                    if (map[i][j] == 0) { //빈공간이면
+                        map[i][j] = 1;
+                        dfs(dep +1); //백트래킹
+                        map[i][j] = 0;
+                    }
                 }
             }
         }
@@ -99,7 +93,7 @@ public class Main {
             //Q를 하나씩 빼면서 visit에 넣고 인접한 노드 큐에 넣기
             virus v = queue1.remove();
 
-            for(int i=0; i<4; i++){
+            for(int i=0; i<4; i++){ //바이러스 퍼트리기
                 int nx = v.x + dx[i];
                 int ny = v.y + dy[i];
 
@@ -112,10 +106,10 @@ public class Main {
             }
         }
 
-        safe(virus_map);
+        safe_count = Math.max(safe_count,safe(virus_map));
     }
 
-    private static void safe(int[][] virus_map) {
+    private static int safe(int[][] virus_map) { //safe 한 것들 갯수 구하기
         int count = 0;
         //안전구간 갯수 카운트
         for (int i = 0; i < n; i++) {
@@ -126,6 +120,7 @@ public class Main {
             }
         }
 
-        safe_count = count;
+        return count;
     }
+
 }
