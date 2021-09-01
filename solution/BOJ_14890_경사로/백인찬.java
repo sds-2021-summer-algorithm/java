@@ -7,7 +7,6 @@ public class Main {
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
-        StringBuilder sb = new StringBuilder();
 
         StringTokenizer st = new StringTokenizer(br.readLine());
         N = Integer.parseInt(st.nextToken());
@@ -28,96 +27,148 @@ public class Main {
     static int makeRoad(){
         int roads = 0;
         for (int i = 0; i < N; i++) {
-            // 좌 -> 우 체크
             boolean isRoad = true;
-            int standardValue = map[i][0];
+            int curValue = map[i][0];
+            int sameCount = 1;
             for (int j = 1; j < N; j++) {
-                if(standardValue != map[i][j]) {
-                    if (Math.abs(standardValue - map[i][j]) > 1) {
+                if (curValue != map[i][j]) {
+                    if(Math.abs(curValue - map[i][j]) > 1) {
                         isRoad = false;
                         break;
                     }
-                    int nextCol = checkSuccessive(map[i][j], i, j, 3);
-                    if(nextCol >= L) {
-                        nextCol = L;
-                        standardValue = map[i][j];
-                        j += nextCol - 1;
-                    } else {
-                        isRoad = false;
-                        break;
-                    }
-                }
-            }
-            if(isRoad) roads++;
-            else {
-                // 우 -> 좌
-                isRoad = true;
-                standardValue = map[i][N - 1];
-                for (int j = N - 2; j >= 0; j--) {
-                    if (standardValue != map[i][j]) {
-                        if (Math.abs(standardValue - map[i][j]) > 1) {
+                    if(curValue < map[i][j]) { // 높아지는 경우
+                        if(sameCount >= L) { // 경사로 놔서 이동 가능
+                            curValue = map[i][j];
+                            sameCount = 1;
+                        }
+                        else {
                             isRoad = false;
                             break;
                         }
-                        int nextCol = checkSuccessive(map[i][j], i, j, 2);
-                        if(nextCol >= L) {
-                            nextCol = L;
-                            standardValue = map[i][j];
-                            j = j - nextCol + 1;
+                    }
+                    else { // 낮아지는 경우
+                        int lowCount = checkSuccessive(map[i][j], i, j, 3);
+                        if(lowCount >= L) {
+                            curValue = map[i][j];
+                            j = j + L - 1;
+                            sameCount = 0;
                         } else {
                             isRoad = false;
                             break;
                         }
                     }
+                } else {
+                    sameCount++;
                 }
-                if(isRoad) roads++;
             }
+            if(!isRoad) {
+                curValue = map[i][N - 1];
+                sameCount = 1;
+                isRoad = true;
+                for (int j = N - 2; j >= 0; j--) {
+                    if (curValue != map[i][j]) {
+                        if(Math.abs(curValue - map[i][j]) > 1) {
+                            isRoad = false;
+                            break;
+                        }
+                        if (curValue < map[i][j]) { // 높아지는 경우
+                            if (sameCount >= L) { // 경사로 놔서 이동 가능
+                                curValue = map[i][j];
+                                sameCount = 1;
+                            } else {
+                                isRoad = false;
+                                break;
+                            }
+                        } else { // 낮아지는 경우
+                            int lowCount = checkSuccessive(map[i][j], i, j, 2);
+                            if (lowCount >= L) {
+                                curValue = map[i][j];
+                                j = j - L + 1;
+                                sameCount = 0;
+                            } else {
+                                isRoad = false;
+                                break;
+                            }
+                        }
+                    } else {
+                        sameCount++;
+                    }
+                }
+            }
+            if(isRoad) roads++;
         }
         for (int j = 0; j < N; j++) {
             boolean isRoad = true;
-            int standardValue = map[0][j];
+            int curValue = map[0][j];
+            int sameCount = 1;
+            // 상 -> 하
             for (int i = 1; i < N; i++) {
-                // 상 -> 하
-                if(standardValue < map[i][j]) {
-                    if (Math.abs(standardValue - map[i][j]) > 1) {
+                if (curValue != map[i][j]) {
+                    if(Math.abs(curValue - map[i][j]) > 1) {
                         isRoad = false;
                         break;
                     }
-                    int nextRow = checkSuccessive(map[i][j], i, j, 1);
-                    if(nextRow >= L) {
-                        nextRow = L;
-                        standardValue = map[i][j];
-                        i += nextRow - 1;
-                    } else {
-                        isRoad = false;
-                        break;
-                    }
-                }
-            }
-            if(isRoad) roads++;
-            else {
-                // 하 -> 상
-                isRoad = true;
-                standardValue = map[N - 1][j];
-                for (int i = N-2; i >= 0; i--) {
-                    if(standardValue < map[i][j]) {
-                        if (Math.abs(standardValue - map[i][j]) > 1) {
+                    if(curValue < map[i][j]) { // 높아지는 경우
+                        if(sameCount >= L) { // 경사로 놔서 이동 가능
+                            curValue = map[i][j];
+                            sameCount = 1;
+                        }
+                        else {
                             isRoad = false;
                             break;
                         }
-                        int nextRow = checkSuccessive(map[i][j], i, j, 0);
-                        if(nextRow >= L) {
-                            nextRow = L;
-                            standardValue = map[i][j];
-                            i =  i - nextRow + 1;
+                    }
+                    else { // 낮아지는 경우
+                        int lowCount = checkSuccessive(map[i][j], i, j, 1);
+                        if(lowCount >= L) {
+                            curValue = map[i][j];
+                            i = i + L - 1;
+                            sameCount = 0;
                         } else {
                             isRoad = false;
                             break;
                         }
                     }
+                } else {
+                    sameCount++;
                 }
-                if (isRoad) roads++;
             }
+            if(!isRoad) {
+                // 하 -> 상
+                curValue = map[N - 1][j];
+                sameCount = 1;
+                isRoad = true;
+                for (int i = N - 2; i >= 0; i--) {
+                    if (curValue != map[i][j]) {
+                        if(Math.abs(curValue - map[i][j]) > 1) {
+                            isRoad = false;
+                            break;
+                        }
+                        if (curValue < map[i][j]) { // 높아지는 경우
+                            if (sameCount >= L) { // 경사로 놔서 이동 가능
+                                curValue = map[i][j];
+                                sameCount = 1;
+                            } else {
+                                isRoad = false;
+                                break;
+                            }
+                        } else { // 낮아지는 경우
+                            int lowCount = checkSuccessive(map[i][j], i, j, 0);
+                            if (lowCount >= L) {
+                                curValue = map[i][j];
+                                i = i - L + 1;
+                                sameCount = 0;
+                            } else {
+                                isRoad = false;
+                                break;
+                            }
+                        }
+                    } else {
+                        sameCount++;
+                    }
+                }
+            }
+            if(isRoad) roads++;
         }
         return roads;
     }
