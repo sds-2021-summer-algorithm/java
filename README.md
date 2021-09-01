@@ -89,7 +89,7 @@
 |[연구소](https://www.acmicpc.net/problem/14502)|S1|[Here](./solution/BOJ_14502_연구소)                                 |  O  |  O  |  -  |  O  |  -  |  O  |  O  |
 |[컨베이어 벨트 위의 로봇](https://www.acmicpc.net/problem/20055)|G5|[Here](./solution/BOJ_20055_컨베이어-벨트-위의-로봇) |  O  |  O  |  -  |  O  |  O  |  O  |  O  |
 |[상어 초등학교](https://www.acmicpc.net/problem/21608)|S1|[Here](./solution/BOJ_21608_상어초등학교)                     |  -  |  O  |  O  |  -  |  O  |  -  |  O  |
-|[경사로](https://www.acmicpc.net/problem/14890)|G3|[Here](./solution/BOJ_14890_경사로)                                 |  -  |  O  |  -  |  -  |  -  |  -  |  -  |
+|[경사로](https://www.acmicpc.net/problem/14890)|G3|[Here](./solution/BOJ_14890_경사로)                                 |  -  |  O  |  O  |  -  |  -  |  -  |  -  |
 |[-](https://www.acmicpc.net/problem/-)|-|[Here](./solution/BOJ_번호_문제)                                              |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
 |[-](https://www.acmicpc.net/problem/-)|-|[Here](./solution/BOJ_번호_문제)                                              |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
 
