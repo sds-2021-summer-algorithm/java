@@ -84,7 +84,7 @@
 |Problem|Level|Solution|                                                                                              김가은|김지원|백인찬|양은서|유경민|최하라|황정훈|
 |-------|:---:|:------:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |[단절선](https://www.acmicpc.net/problem/11400)|P5|[Here](./solution/BOJ_11400_단절선)                                 |  -  |  O  |  -  |  O  |  O  |  O  |  O  |
-|[스타트와 링크](https://www.acmicpc.net/problem/14889)|S3|[Here](./solution/BOJ_14889_스타트와-링크)                    |  -  |  O  |  -  |  O  |  O  |  O  |  O  |
+|[스타트와 링크](https://www.acmicpc.net/problem/14889)|S3|[Here](./solution/BOJ_14889_스타트와-링크)                    |  -  |  O  |  O  |  O  |  O  |  O  |  O  |
 |[구슬 탈출2](https://www.acmicpc.net/problem/13460)|G2|[Here](./solution/BOJ_13460_구슬-탈출2)                         |  O  |  O  |  -  |  O  |  O  |  O  |  O  |
 |[연구소](https://www.acmicpc.net/problem/14502)|S1|[Here](./solution/BOJ_14502_연구소)                                 |  O  |  O  |  O  |  O  |  -  |  O  |  O  |
 |[컨베이어 벨트 위의 로봇](https://www.acmicpc.net/problem/20055)|G5|[Here](./solution/BOJ_20055_컨베이어-벨트-위의-로봇) |  O  |  O  |  O  |  O  |  O  |  O  |  O  |
