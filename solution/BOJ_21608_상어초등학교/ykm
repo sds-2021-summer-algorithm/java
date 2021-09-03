@@ -1,0 +1,135 @@
+import java.io.*;
+import java.util.*;
+
+public class Main {
+    static int N; // 학생수 3-20
+    static int[][] classroom; // 자리
+    static int[][] students; // 좋아하는 사람
+    static PriorityQueue<point> pq = new PriorityQueue<point>();
+
+    public static void main(String[] args)throws IOException{
+        System.setIn(new FileInputStream("P21608/input.txt"));
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        N = Integer.parseInt(br.readLine());
+        classroom = new int [N][N];
+        students = new int[N*N+1][4];
+
+        for(int i = 0 ; i<N*N ; i++){
+            StringTokenizer st = new StringTokenizer(br.readLine());
+            int studentNum = Integer.parseInt(st.nextToken());
+            for(int j = 0 ; j<4; j++){
+                students[studentNum][j] = Integer.parseInt(st.nextToken());
+            }
+
+            // 현재 학생이 앉을 자리 찾기
+            if(i==0) classroom[1][1]=studentNum; // 첫번째 학생은 무조건 1,1
+            else findPosition(studentNum, i+1);
+        }
+
+        // 모든 학생이 자리-를 정하고 나면 만족도 계산
+        satisfation();
+        br.close();
+    }
+
+    public static class point implements Comparable<point>{
+        int like;
+        int empty;
+        int x;
+        int y;
+
+        public point(int like, int empty, int x, int y) {
+            this.like = like;
+            this.empty = empty;
+            this.x = x;
+            this.y = y;
+        }
+
+        @Override
+        public String toString() {
+            return "point [empty=" + empty + ", like=" + like + ", x=" + x + ", y=" + y + "]";
+        }
+
+        @Override
+        public int compareTo(point o) {
+            if(this.like == o.like){
+                if(this.empty == o.empty){
+                    if(this.x == o.x){
+                        return this.y - o.y; // 오름차순
+                    }
+                    return this.x - o.x; // 오름차순
+                }
+                return o.empty - this.empty; // 내림차순
+            }
+            return o.like - this.like; // 내림차순
+        }
+    }
+
+    // 현재 자리를 정해야할 학생번호, 지금까지 입력받은 학생수
+    public static void findPosition(int studentNum, int student){
+        // 1. 좋아하는 사람과 최대한 인접(city block)
+        // 2. 주변에 빈칸이 최대한 많도록
+        // 3. 같은 조건이라면 좌표의 크기가 작게
+
+        pq.clear();
+        int []mx = {-1, 1, 0, 0};
+        int []my = {0, 0, -1, 1};
+        // boolean flag = false; // 더 계산해볼 필요가 없어지면 끌예정 -> 괜히 조건문만 많아지는것 같아 삭제
+
+        for(int i = 0 ; i<N ; i++){ // 행
+            for(int j = 0 ; j<N ; j++){ // 열
+                if(classroom[i][j]!=0) continue; // 빈자리가 아니면 계산할 필요 없음.
+
+                int like = 0;
+                int empty = 0;
+                // 빈자리들의 점수 계산
+                for(int m = 0 ; m<4; m++){
+                    int x = i + mx[m];
+                    int y = j + my[m]; 
+
+                    if(x>=0 && x<N && y>=0 && y<N){ // 교실 범위내
+                        for(int l = 0 ; l <4 ; l++){
+                            if(classroom[x][y]==students[studentNum][l]) {
+                                like++;
+                                break;
+                            }
+                        }
+                        if(classroom[x][y]==0) empty++;
+                    }
+                } 
+                pq.offer(new point(like, empty, i, j));  
+            }
+        }
+        // 점수가 가장 높은곳에 자리 배정
+        point decision = pq.poll();
+        classroom[decision.x][decision.y] = studentNum;
+    }
+    
+    // 만족도 계산
+    public static void satisfation(){
+        // 상, 하, 좌, 우
+        int []mx = {-1, 1, 0, 0};
+        int []my = {0, 0, -1, 1};
+
+        int s = 0;
+        for(int i = 0 ; i <N ; i++){
+            for(int j = 0; j<N ; j++){
+                int studentNum = classroom[i][j];
+                int temp = 0;
+                for(int m = 0 ;m < 4 ; m++){ // 현위치에서 상하좌우
+                    int x = i+mx[m];
+                    int y = j+my[m];
+                    if(x>=0 && x<N && y>=0 && y<N){ // 교실 범위내
+                        for(int like = 0 ; like <4 ; like++){
+                            if(classroom[x][y]==students[studentNum][like]){
+                                temp++;
+                                break;
+                            }
+                        }
+                    }
+                }
+                s += Math.pow(10, temp-1);
+            }
+        }
+        System.out.println(s);
+    }
+}
