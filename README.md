@@ -91,7 +91,7 @@
 |[상어 초등학교](https://www.acmicpc.net/problem/21608)|S1|[Here](./solution/BOJ_21608_상어초등학교)                     |  -  |  O  |  O  |  O  |  O  |  O  |  O  |
 |[경사로](https://www.acmicpc.net/problem/14890)|G3|[Here](./solution/BOJ_14890_경사로)                                 |  -  |  O  |  O  |  O  |  -  |  O  |  O  |
 |[인구 이동](https://www.acmicpc.net/problem/16234)|G5|[Here](./solution/BOJ_16234_인구-이동)                            |  -  |  -  |  O  |  -  |  -  |  -  |  O  |
-|[사다리 조작](https://www.acmicpc.net/problem/15684)|G4|[Here](./solution/BOJ_15684_사다리-조작)                        |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
+|[사다리 조작](https://www.acmicpc.net/problem/15684)|G4|[Here](./solution/BOJ_15684_사다리-조작)                        |  -  |  -  |  -  |  -  |  -  |  -  |  O  |
 |[-](https://www.acmicpc.net/problem/-)|-|[Here](./solution/BOJ_번호_문제)                                              |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
 |[-](https://www.acmicpc.net/problem/-)|-|[Here](./solution/BOJ_번호_문제)                                              |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
 
