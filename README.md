@@ -92,7 +92,8 @@
 |[경사로](https://www.acmicpc.net/problem/14890)|G3|[Here](./solution/BOJ_14890_경사로)                                 |  -  |  O  |  O  |  O  |  -  |  O  |  O  |
 |[인구 이동](https://www.acmicpc.net/problem/16234)|G5|[Here](./solution/BOJ_16234_인구-이동)                            |  -  |  O  |  O  |  O |  -  |  O  |  O  |
 |[사다리 조작](https://www.acmicpc.net/problem/15684)|G4|[Here](./solution/BOJ_15684_사다리-조작)                        |  -  |  O  |  O  |  O |  O  |  O  |  O  |
+|[AC](https://www.acmicpc.net/problem/5430)|G5|[Here](./solution/BOJ_5430_AC)                                              |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
+|[LCA2](https://www.acmicpc.net/problem/11438)|P5|[Here](./solution/BOJ_11438_LCA2)                                              |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
 |[-](https://www.acmicpc.net/problem/-)|-|[Here](./solution/BOJ_번호_문제)                                              |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
 |[-](https://www.acmicpc.net/problem/-)|-|[Here](./solution/BOJ_번호_문제)                                              |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
-
 <br>
