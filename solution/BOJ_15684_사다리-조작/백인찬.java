@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Main {
     static boolean[][] ladder; // [i][j] : [i][j+1]로 가는 사다리가 있는가?
-    static int N, M, H;
+    static int N, M, H, min = Integer.MAX_VALUE;
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -33,11 +33,12 @@ public class Main {
         bw.close();
     }
     static void backtrack(int i, int count, int max) {
-        if(count > max) return;
-
-        if(move()) {
-            System.out.println(count);
-            System.exit(0); // max 개수를 1,2,3 으로 순차적으로 증가시키고 있으니 바로 exit해도 됨
+        if(count == max) {
+            if(move()) {
+                System.out.println(count);
+                System.exit(0);
+            }
+            return;
         }
 
         for (int r = i; r <= H; r++) {
