@@ -6,7 +6,6 @@ public class Main {
     static List<Coord> candidates;
     static List<Coord> teachers;
 
-    static boolean[] visited;
     static boolean flag = false;
     static int N;
     static class Coord {
@@ -39,7 +38,6 @@ public class Main {
                 else if(map[i][j] == 'T') teachers.add(new Coord(i, j));
             }
         }
-        visited = new boolean[candidates.size()];
 
         dfs(0, 0);
         if(flag) bw.write("YES");
@@ -59,6 +57,7 @@ public class Main {
             Coord cur = candidates.get(j);
             map[cur.i][cur.j] = 'O';
             dfs(j + 1, count + 1);
+            if(flag) return;
             map[cur.i][cur.j] = 'X';
         }
     }
