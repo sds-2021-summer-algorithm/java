@@ -94,8 +94,8 @@
 |[사다리 조작](https://www.acmicpc.net/problem/15684)|G4|[Here](./solution/BOJ_15684_사다리-조작)                        |  -  |  O  |  O  |  O |  O  |  O  |  O  |
 |[AC](https://www.acmicpc.net/problem/5430)|G5|[Here](./solution/BOJ_5430_AC)                                          |  -  |  -  |  O  |  -  |  O  |  O  |  O  |
 |[LCA2](https://www.acmicpc.net/problem/11438)|P5|[Here](./solution/BOJ_11438_LCA2)                                    |  -  |  -  |  O  |  -  |  O  |  O  |  O  |
-|[감시 피하기](https://www.acmicpc.net/problem/18428)|S1|[Here](./solution/BOJ_18428_감시-피하기)                                              |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
-|[미세먼지 안녕!](https://www.acmicpc.net/problem/17144)|G4|[Here](./solution/BOJ_17144_미세먼지-안녕!)                                              |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
+|[감시 피하기](https://www.acmicpc.net/problem/18428)|S1|[Here](./solution/BOJ_18428_감시-피하기)                        |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
+|[미세먼지 안녕!](https://www.acmicpc.net/problem/17144)|G4|[Here](./solution/BOJ_17144_미세먼지-안녕!)                  |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
 |[-](https://www.acmicpc.net/problem/-)|-|[Here](./solution/BOJ_번호_문제)                                              |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
 |[-](https://www.acmicpc.net/problem/-)|-|[Here](./solution/BOJ_번호_문제)                                              |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
 <br>
