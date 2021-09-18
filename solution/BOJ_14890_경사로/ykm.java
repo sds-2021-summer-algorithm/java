@@ -25,20 +25,20 @@ public class Main {
         }
 
         for(int i = 0 ; i<N ; i++){
-            if(checkRows(map[i])) ans++;
+            if(check(map[i])) ans++;
 
             int[] col = new int[N];
             for(int j = 0 ; j<N ; j++){
                 col[j] = map[j][i];
             }
-            if(checkRows(col)) ans++;
+            if(check(col)) ans++;
         }
         System.out.println(ans);
         br.close();
     }
 
     // 경사로를 놓는것이 불가능하면 false를 리턴
-    public static boolean checkRows(int[] x){
+    public static boolean check(int[] x){
         boolean flag = false;
         int count = 0;
         boolean[] visit = new boolean[x.length];
@@ -51,6 +51,10 @@ public class Main {
                     if(count<L){
                         count++;
                         visit[i] = true;
+                        if(count==L){
+                            flag = false;
+                            count = 0;
+                        }
                     }else{
                         flag = false; // 경사로를 만드는 데 필요한 평지의 개수를 충족한 경우
                     }
@@ -58,6 +62,7 @@ public class Main {
             }else if(diff==1){
                 if(L==1){
                     visit[i] = true;
+                    flag = false;
                 }else{
                     if(flag) return false;
                     flag = true;
@@ -66,6 +71,8 @@ public class Main {
                 }
             }else if(diff>=2){
                 return false;
+            }else{
+                if(flag && count<L) return false;
             }
         }
         if(flag && count<L) return false;
@@ -79,20 +86,28 @@ public class Main {
                         if(visit[i]) return false; // 경사로가 놓인곳에 경사로를 놓으려함
                         count++;
                         visit[i] = true;
+                        if(count==L){
+                            flag = false;
+                            count = 0;
+                        }
                     }else{
                         flag = false;
                     }     
                 }
             }else if(diff==1){
                 if(L==1){
-                    if(visit[i]) return false;
+                    if(visit[i]) return false; // 경사로가 놓인곳에 경사로를 놓으려함
+                    flag = false;
                 }else{
                     if(flag) return false;
+                    if(visit[i]) return false; // 경사로가 놓인곳에 경사로를 놓으려함
                     flag = true;
                     count = 1;
                 }
             }else if(diff>=2){
                 return false;
+            }else{
+                if(flag && count<L) return false;  
             }
         }
 
