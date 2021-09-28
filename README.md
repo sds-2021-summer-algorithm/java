@@ -23,9 +23,6 @@
 - 각자 어떻게 풀었는지? + 어느 부분에서 어려움을 느꼈는지 + 애매한 부분
 - 문제 브랜치에 풀고나서 PR로 솔루션에 넣기
 
-### TO-DO
-
-- [ ] 각자 프로젝트 아이디어 1개씩 생각한 후 Slack에 올리기 ( Due Date. 08.25 )
 
 ### 풀고 있는 문제집
 [삼성 SW 역량 테스트 기출 문제](https://www.acmicpc.net/workbook/view/1152)
@@ -98,7 +95,7 @@
 |[감시 피하기](https://www.acmicpc.net/problem/18428)|S1|[Here](./solution/BOJ_18428_감시-피하기)                        |  -  |  O  |  O  |  O  |  O  |  O  |  O  |
 |[미세먼지 안녕!](https://www.acmicpc.net/problem/17144)|G4|[Here](./solution/BOJ_17144_미세먼지-안녕!)                  |  -  |  O  |  O  |  O  |  O  |  O  |  O  |
 |[단어 수학](https://www.acmicpc.net/problem/1339)|G4|[Here](./solution/BOJ_1339_단어-수학)                              |  -  |  -  |  O  |  -  |  -  |  -  |  O  |
-|[소수 경로](https://www.acmicpc.net/problem/1963)|G4|[Here](./solution/BOJ_1964_소수-경로)                              |  -  |  -  |  O  |  -  |  -  |  -  |  -  |
+|[소수 경로](https://www.acmicpc.net/problem/1963)|G4|[Here](./solution/BOJ_1963_소수-경로)                              |  -  |  -  |  O  |  -  |  -  |  -  |  O  |
 |[-](https://www.acmicpc.net/problem/-)|-|[Here](./solution/BOJ_번호_문제)                                              |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
 |[-](https://www.acmicpc.net/problem/-)|-|[Here](./solution/BOJ_번호_문제)                                              |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
 <br>
