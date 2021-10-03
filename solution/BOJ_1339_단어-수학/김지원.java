@@ -5,7 +5,7 @@ public class Main {
     public static void main(String[] args) {
         
         //testcase 및 문자열 입력
-        Scanner sc = new Scanner(System.in);
+        Scanner sc = new Scanner(System.in); //bufferedreader로 바꾸기
         int n = sc.nextInt();
         String [] arr = new String[n];
         int [] alpha = new int[26];
