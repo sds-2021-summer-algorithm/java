@@ -96,6 +96,6 @@
 |[미세먼지 안녕!](https://www.acmicpc.net/problem/17144)|G4|[Here](./solution/BOJ_17144_미세먼지-안녕!)                  |  -  |  O  |  O  |  O  |  O  |  O  |  O  |
 |[단어 수학](https://www.acmicpc.net/problem/1339)|G4|[Here](./solution/BOJ_1339_단어-수학)                              |  -  |  O  |  O  |  O  |  O  |  O  |  O  |
 |[소수 경로](https://www.acmicpc.net/problem/1963)|G4|[Here](./solution/BOJ_1963_소수-경로)                              |  -  |  O  |  O  |  O  |  O  |  O  |  O  |
-|[A와 B](https://www.acmicpc.net/problem/12904)|G5|[Here](./solution/BOJ_12904_A와-B)                                              |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
-|[Yonsei TOTO](https://www.acmicpc.net/problem/12018)|S3|[Here](./solution/BOJ_12018_Yonsei-TOTO)                                              |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
+|[A와 B](https://www.acmicpc.net/problem/12904)|G5|[Here](./solution/BOJ_12904_A와-B)                                              |  -  |  -  |  O  |  -  |  -  |  -  |  -  |
+|[Yonsei TOTO](https://www.acmicpc.net/problem/12018)|S3|[Here](./solution/BOJ_12018_Yonsei-TOTO)                                              |  -  |  -  |  O  |  -  |  -  |  -  |  -  |
 <br>
