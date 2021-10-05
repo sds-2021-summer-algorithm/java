@@ -81,21 +81,21 @@
 
 |Problem|Level|Solution|                                                                                              김가은|김지원|백인찬|양은서|유경민|최하라|황정훈|
 |-------|:---:|:------:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-|[단절선](https://www.acmicpc.net/problem/11400)|P5|[Here](./solution/BOJ_11400_단절선)                                 |  -  |  O  |  -  |  O  |  O  |  O  |  O  |
+|[단절선](https://www.acmicpc.net/problem/11400)|P5|[Here](./solution/BOJ_11400_단절선)                                  |  -  |  O  |  -  |  O  |  O  |  O  |  O  |
 |[스타트와 링크](https://www.acmicpc.net/problem/14889)|S3|[Here](./solution/BOJ_14889_스타트와-링크)                    |  -  |  O  |  O  |  O  |  O  |  O  |  O  |
-|[구슬 탈출2](https://www.acmicpc.net/problem/13460)|G2|[Here](./solution/BOJ_13460_구슬-탈출2)                         |  O  |  O  |  -  |  O  |  O  |  O  |  O  |
-|[연구소](https://www.acmicpc.net/problem/14502)|S1|[Here](./solution/BOJ_14502_연구소)                                 |  O  |  O  |  O  |  O  |  O  |  O  |  O  |
+|[구슬 탈출2](https://www.acmicpc.net/problem/13460)|G2|[Here](./solution/BOJ_13460_구슬-탈출2)                          |  O  |  O  |  -  |  O  |  O  |  O  |  O  |
+|[연구소](https://www.acmicpc.net/problem/14502)|S1|[Here](./solution/BOJ_14502_연구소)                                  |  O  |  O  |  O  |  O  |  O  |  O  |  O  |
 |[컨베이어 벨트 위의 로봇](https://www.acmicpc.net/problem/20055)|G5|[Here](./solution/BOJ_20055_컨베이어-벨트-위의-로봇) |  O  |  O  |  O  |  O  |  O  |  O  |  O  |
 |[상어 초등학교](https://www.acmicpc.net/problem/21608)|S1|[Here](./solution/BOJ_21608_상어초등학교)                     |  -  |  O  |  O  |  O  |  O  |  O  |  O  |
-|[경사로](https://www.acmicpc.net/problem/14890)|G3|[Here](./solution/BOJ_14890_경사로)                                 |  -  |  O  |  O  |  O  |  O  |  O  |  O  |
+|[경사로](https://www.acmicpc.net/problem/14890)|G3|[Here](./solution/BOJ_14890_경사로)                                  |  -  |  O  |  O  |  O  |  O  |  O  |  O  |
 |[인구 이동](https://www.acmicpc.net/problem/16234)|G5|[Here](./solution/BOJ_16234_인구-이동)                            |  -  |  O  |  O  |  O |  O  |  O  |  O  |
 |[사다리 조작](https://www.acmicpc.net/problem/15684)|G4|[Here](./solution/BOJ_15684_사다리-조작)                        |  -  |  O  |  O  |  O |  O  |  O  |  O  |
-|[AC](https://www.acmicpc.net/problem/5430)|G5|[Here](./solution/BOJ_5430_AC)                                          |  -  |  O  |  O  |  O  |  O  |  O  |  O  |
-|[LCA2](https://www.acmicpc.net/problem/11438)|P5|[Here](./solution/BOJ_11438_LCA2)                                    |  -  |  O  |  O  |  -  |  O  |  O  |  O  |
+|[AC](https://www.acmicpc.net/problem/5430)|G5|[Here](./solution/BOJ_5430_AC)                                           |  -  |  O  |  O  |  O  |  O  |  O  |  O  |
+|[LCA2](https://www.acmicpc.net/problem/11438)|P5|[Here](./solution/BOJ_11438_LCA2)                                     |  -  |  O  |  O  |  -  |  O  |  O  |  O  |
 |[감시 피하기](https://www.acmicpc.net/problem/18428)|S1|[Here](./solution/BOJ_18428_감시-피하기)                        |  -  |  O  |  O  |  O  |  O  |  O  |  O  |
 |[미세먼지 안녕!](https://www.acmicpc.net/problem/17144)|G4|[Here](./solution/BOJ_17144_미세먼지-안녕!)                  |  -  |  O  |  O  |  O  |  O  |  O  |  O  |
 |[단어 수학](https://www.acmicpc.net/problem/1339)|G4|[Here](./solution/BOJ_1339_단어-수학)                              |  -  |  O  |  O  |  O  |  O  |  O  |  O  |
 |[소수 경로](https://www.acmicpc.net/problem/1963)|G4|[Here](./solution/BOJ_1963_소수-경로)                              |  -  |  O  |  O  |  O  |  O  |  O  |  O  |
-|[A와 B](https://www.acmicpc.net/problem/12904)|G5|[Here](./solution/BOJ_12904_A와-B)                                    |  -  |  -  |  O  |  -  |  O  |  -  |  -  |
-|[Yonsei TOTO](https://www.acmicpc.net/problem/12018)|S3|[Here](./solution/BOJ_12018_Yonsei-TOTO)                        |  -  |  -  |  O  |  -  |  O  |  -  |  -  |
+|[A와 B](https://www.acmicpc.net/problem/12904)|G5|[Here](./solution/BOJ_12904_A와-B)                                    |  -  |  -  |  O  |  -  |  O  |  -  |  O  |
+|[Yonsei TOTO](https://www.acmicpc.net/problem/12018)|S3|[Here](./solution/BOJ_12018_Yonsei-TOTO)                        |  -  |  -  |  O  |  -  |  O  |  -  |  O  |
 <br>
