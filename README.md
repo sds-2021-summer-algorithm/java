@@ -98,6 +98,6 @@
 |[소수 경로](https://www.acmicpc.net/problem/1963)|G4|[Here](./solution/BOJ_1963_소수-경로)                              |  -  |  O  |  O  |  O  |  O  |  O  |  O  |
 |[A와 B](https://www.acmicpc.net/problem/12904)|G5|[Here](./solution/BOJ_12904_A와-B)                                    |  -  |  -  |  O  | O |  O  |  -  |  O  |
 |[Yonsei TOTO](https://www.acmicpc.net/problem/12018)|S3|[Here](./solution/BOJ_12018_Yonsei-TOTO)                        |  -  |  -  |  O  | O |  O  |  -  |  O  |
-|[KCM Travel](https://www.acmicpc.net/problem/10217)|G1][Here](./solution/BOJ_10217_KCM-Travel)                       |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
-|[우주 탐사선](https://www.acmicpc.net/problem/17182)|G2][Here](./solution/BOJ_17182_우주-탐사선)                       |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
+|[KCM Travel](https://www.acmicpc.net/problem/10217)|G1|[Here](./solution/BOJ_10217_KCM-Travel)                       |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
+|[우주 탐사선](https://www.acmicpc.net/problem/17182)|G2|[Here](./solution/BOJ_17182_우주-탐사선)                       |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
 <br>
