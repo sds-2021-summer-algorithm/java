@@ -4,38 +4,14 @@ import java.io.*;
 import java.util.*;
 
 public class Main {
-
-	static class conference implements Comparable<conference>{
-		int start;
-		int end;
-		int time;
-		boolean dup = false;
-
-		public conference(int start, int end, int time) {
-			this.start = start;
-			this.end = end;
-			this.time = time;
-		}
-
-		@Override
-		public String toString() {
-			return "conference [end=" + end + ", start=" + start + ", time=" + time + "]";
-		}	
-
-		@Override
-		public int compareTo(conference o){
-			return this.time - o.time;
-		}
-	}
 	static int N; // 회의 수
-	static ArrayList<conference> cons;
+	static int[][] cons;
 
-	
 	public static void main(String[] args)throws IOException{
 		System.setIn(new FileInputStream("input.txt"));
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 		N = Integer.parseInt(br.readLine());
-		cons = new ArrayList<conference>();
+		cons = new int[N][2];
 
 		// 회의 저장
 		int max = 0;
@@ -43,50 +19,41 @@ public class Main {
 			StringTokenizer st = new StringTokenizer(br.readLine());
 			int a = Integer.parseInt(st.nextToken());
 			int b = Integer.parseInt(st.nextToken());
-			int c = b-a;
-			cons.add(new conference(a, b, c));
+			cons[i][0] = a;
+			cons[i][1] = b;
 
 			max = Math.max(max, b);
 		}
 
-		// 회의 진행시간이 짧은 순서로 정렬
-		Collections.sort(cons);
+		// 끝나는 시간 순서로 정렬
+		Arrays.sort(cons, Comparator.comparingInt(a -> a[1]));
 
-		// 겹치는 회의 확인
-		conference prev = cons.get(0);
-		for(int i = 1 ; i< cons.size(); i++){
-			conference current = cons.get(i);
-			if(prev.start==current.start && prev.end == current.end){
-				current.dup = true;
-			}else{
-				prev = cons.get(i);
-			}
-		}
+		int[] count = new int[max+1];		// index 시간까지 가능한 최대 회의수
 
-		boolean[] check = new boolean[max+1];
-		int ans = 0;
-
-		// 회의시간이 짧은 회의부터 예약하기
-		for(int i = 0 ; i<N ; i++){
-			conference current = cons.get(i);
-			if(current.dup) continue;
-			boolean flag = true; // 현재 회의가 예약 가능한지 확인
-
-			for(int j = current.start+1 ; j<current.end; j++){
-				if(check[j]) {
-					flag = false;
-					break;
+		// 시간순서대로 현재 회의를 넣는것이 좋을지 넣지 않는 것이 좋을지 판단
+		// 약간 dp..?
+		int j = 0;
+		for(int i = 0 ; i<= max ; i++){     // 시간의 흐름
+			while(j<N && cons[j][1]<=i){
+				int start = cons[j][0];
+				int end = cons[j][1];
+				if( end > i) {
+					if(i-1 >= 0) count[i] = count[i-1];
+					continue;
+				}
+				else{
+					if(start == end){
+						count[i] = count[i-1]+1;
+					}
+					else if(start-1 >= 0) count[i] = Math.max( count[start] + 1, Math.max(count[i-1],count[i]));
+					else {
+						if(i-1 >= 0) count[i] = Math.max(1, count[i-1]);
+						else count[i] = 1;
+					}
+					j++;
 				}
 			}
-
-			if(flag){
-				for(int j = current.start ; j<=current.end; j++){
-					check[j] = true;
-				}	
-				ans++;
-			}
 		}
-		System.out.println(ans);
+		System.out.println(count[max]);
 	}
-
 }
