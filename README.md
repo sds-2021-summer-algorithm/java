@@ -100,4 +100,6 @@
 |[Yonsei TOTO](https://www.acmicpc.net/problem/12018)|S3|[Here](./solution/BOJ_12018_Yonsei-TOTO)                        |  -  |  O  |  O  | O |  O  |  O  |  O  |
 |[KCM Travel](https://www.acmicpc.net/problem/10217)|G1|[Here](./solution/BOJ_10217_KCM-Travel)                       |  -  |  O  |  O  |  -  |  -  |  O  |  O  |
 |[우주 탐사선](https://www.acmicpc.net/problem/17182)|G2|[Here](./solution/BOJ_17182_우주-탐사선)                       |  -  |  O  |  O  |  -  |  -  |  O  |  O  |
+|[내리막길](https://www.acmicpc.net/problem/1520)|G5|[Here](./solution/BOJ_1520_내리막_길)                       |  -  |   -    |   -   |  -  |  -  |   -    |  - |
+|[RGB 거리 ](https://www.acmicpc.net/problem/1149)|S1|[Here](./solution/BOJ_1149_RGB_거리)                       |  -  |   -  |   -  |  -  |  -  |  -   |  -  |
 <br>
