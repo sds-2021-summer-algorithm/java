@@ -96,10 +96,10 @@
 |[미세먼지 안녕!](https://www.acmicpc.net/problem/17144)|G4|[Here](./solution/BOJ_17144_미세먼지-안녕!)                  |  -  |  O  |  O  |  O  |  O  |  O  |  O  |
 |[단어 수학](https://www.acmicpc.net/problem/1339)|G4|[Here](./solution/BOJ_1339_단어-수학)                              |  -  |  O  |  O  |  O  |  O  |  O  |  O  |
 |[소수 경로](https://www.acmicpc.net/problem/1963)|G4|[Here](./solution/BOJ_1963_소수-경로)                              |  -  |  O  |  O  |  O  |  O  |  O  |  O  |
-|[A와 B](https://www.acmicpc.net/problem/12904)|G5|[Here](./solution/BOJ_12904_A와-B)                                    |  -  |  O  |  O  | O |  O  |  O  |  O  |
-|[Yonsei TOTO](https://www.acmicpc.net/problem/12018)|S3|[Here](./solution/BOJ_12018_Yonsei-TOTO)                        |  -  |  O  |  O  | O |  O  |  O  |  O  |
-|[KCM Travel](https://www.acmicpc.net/problem/10217)|G1|[Here](./solution/BOJ_10217_KCM-Travel)                       |  -  |  O  |  O  |  -  |  -  |  O  |  O  |
-|[우주 탐사선](https://www.acmicpc.net/problem/17182)|G2|[Here](./solution/BOJ_17182_우주-탐사선)                       |  -  |  O  |  O  |  O  |  O  |  O  |  O  |
-|[내리막길](https://www.acmicpc.net/problem/1520)|G5|[Here](./solution/BOJ_1520_내리막_길)                       |  -  |   -    |   -   |  -  |  -  |   -    |  - |
-|[RGB 거리 ](https://www.acmicpc.net/problem/1149)|S1|[Here](./solution/BOJ_1149_RGB_거리)                       |  -  |   -  |   -  |  -  |  -  |  -   |  -  |
+|[A와 B](https://www.acmicpc.net/problem/12904)|G5|[Here](./solution/BOJ_12904_A와-B)                                   |  -  |  O  |  O  |  O  |  O  |  O  |  O  |
+|[Yonsei TOTO](https://www.acmicpc.net/problem/12018)|S3|[Here](./solution/BOJ_12018_Yonsei-TOTO)                      |  -  |  O  |  O  |  O  |  O  |  O  |  O  |
+|[KCM Travel](https://www.acmicpc.net/problem/10217)|G1|[Here](./solution/BOJ_10217_KCM-Travel)                        |  -  |  O  |  O  |  -  |  -  |  O  |  O  |
+|[우주 탐사선](https://www.acmicpc.net/problem/17182)|G2|[Here](./solution/BOJ_17182_우주-탐사선)                        |  -  |  O  |  O  |  O  |  O  |  O  |  O  |
+|[내리막 길](https://www.acmicpc.net/problem/1520)|G5|[Here](./solution/BOJ_1520_내리막-길)                              |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
+|[RGB 거리](https://www.acmicpc.net/problem/1149)|S1|[Here](./solution/BOJ_1149_RGB-거리)                               |  -  |  -  |  -  |  -  |  -  |  -  |  O  |
 <br>
