@@ -103,7 +103,7 @@
 |[내리막 길](https://www.acmicpc.net/problem/1520)|G5|[Here](./solution/BOJ_1520_내리막-길)                              |  -  |  O  |  -  |  O  |  O  |  -  |  O  |
 |[RGB거리](https://www.acmicpc.net/problem/1149)|S1|[Here](./solution/BOJ_1149_RGB거리)                                 |  -  |  O  |  -  |  O  |  O  |  -  |  O  |
 |[쉬운 계단 수](https://www.acmicpc.net/problem/10844)|S1|[Here](./solution/BOJ_10844_쉬운-계단-수)                              |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
-|[회의실 배정](https://www.acmicpc.net/problem/1931)|S2|[Here](./solution/BOJ_1149_회의실배정)                                 |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
+|[회의실 배정](https://www.acmicpc.net/problem/1931)|S2|[Here](./solution/BOJ_1931_회의실배정)                                 |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
 |[-](https://www.acmicpc.net/problem/-)|-|[Here](./solution/-)                              |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
 |[-](https://www.acmicpc.net/problem/-)|-|[Here](./solution/-)                                 |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
 <br>
