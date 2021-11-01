@@ -3,7 +3,7 @@ import java.util.*;
 
 public class Main {
     static int[] lastYear, thisYear, inDegree;
-    static List[] outs;
+    static boolean[][] outs;
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
@@ -14,11 +14,10 @@ public class Main {
         for (int t = 0; t < T; t++) {
             int n = Integer.parseInt(br.readLine());
             lastYear = new int[n + 1];
-            outs = new List[n + 1];
+            outs = new boolean[n + 1][n + 1];
             inDegree = new int[n + 1];
             st = new StringTokenizer(br.readLine());
             for (int i = 1; i <= n; i++) {
-                outs[i] = new ArrayList<Integer>();
                 int num = Integer.parseInt(st.nextToken());
                 lastYear[num] = i;
             }
@@ -26,7 +25,7 @@ public class Main {
                 for (int j = 1; j <= n; j++) {
                     if(i == j) continue;
                     if(lastYear[i] < lastYear[j]) { // i가 j보다 잘했으면
-                        outs[i].add(j);
+                        outs[i][j] = true;
                         inDegree[j]++;
                     }
                 }
@@ -42,13 +41,13 @@ public class Main {
                     // 올해는 a가 b보다 잘함 a -> b
                     inDegree[a]--;
                     inDegree[b]++;
-                    outs[b].removeIf(k -> k.equals(a));
-                    outs[a].add(b);
+                    outs[b][a] = false;
+                    outs[a][b] = true;
                 } else {
                     inDegree[b]--;
                     inDegree[a]++;
-                    outs[a].removeIf(k -> k.equals(b));
-                    outs[b].add(a);
+                    outs[a][b] = false;
+                    outs[b][a] = true;
                 }
             }
             for (int i = 1; i <= n; i++) {
@@ -71,11 +70,11 @@ public class Main {
                 }
                 int cur = q.remove();
                 thisYear[i++] = cur;
-                int len = outs[cur].size();
-                for (int j = 0; j < len; j++) {
-                    int adj = (int) outs[cur].get(j);
-                    inDegree[adj]--;
-                    if(inDegree[adj] == 0) q.add(adj);
+                for (int j = 1; j <= n; j++) {
+                    if(outs[cur][j]) {
+                        inDegree[j]--;
+                        if(inDegree[j] == 0) q.add(j);
+                    }
                 }
             }
             if(flag) {
