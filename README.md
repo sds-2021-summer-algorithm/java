@@ -104,6 +104,6 @@
 |[RGB거리](https://www.acmicpc.net/problem/1149)|S1|[Here](./solution/BOJ_1149_RGB거리)                                 |  -  |  O  |  -  |  O  |  O  |  -  |  O  |
 |[쉬운 계단 수](https://www.acmicpc.net/problem/10844)|S1|[Here](./solution/BOJ_10844_쉬운-계단-수)                     |  -  |  O  |  O  |  -  |  O  |  -  |  O  |
 |[회의실 배정](https://www.acmicpc.net/problem/1931)|S2|[Here](./solution/BOJ_1931_회의실배정)                          |  -  |  O  |  O  |  -  |  O  |  -  |  O  |
-|[최종 순위](https://www.acmicpc.net/problem/3665)|G1|[Here](./solution/BOJ_3665_최종순위)                              |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
-|[연구소 2](https://www.acmicpc.net/problem/17141)|G5|[Here](./solution/BOJ_17141_연구소-2)                                 |  -  |  -  |  -  |  -  |  O  |  -  |  -  |
+|[최종 순위](https://www.acmicpc.net/problem/3665)|G1|[Here](./solution/BOJ_3665_최종순위)                              |  -  |  -  |  O  |  -  |  -  |  -  |  -  |
+|[연구소 2](https://www.acmicpc.net/problem/17141)|G5|[Here](./solution/BOJ_17141_연구소-2)                                 |  -  |  -  |  O  |  -  |  O  |  -  |  -  |
 <br>
