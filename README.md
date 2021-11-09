@@ -107,5 +107,5 @@
 |[최종 순위](https://www.acmicpc.net/problem/3665)|G1|[Here](./solution/BOJ_3665_최종순위)                              |  -  |  -  |  O  |  -  |  -  |  -  |  -  |
 |[연구소 2](https://www.acmicpc.net/problem/17141)|G5|[Here](./solution/BOJ_17141_연구소-2)                             |  -  |  O  |  O  |  -  |  O  |  -  |  -  |
 |[치즈](https://www.acmicpc.net/problem/2636)|G5|[Here](./solution/BOJ_2636_치즈)                                       |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
-|[나무 재테크](https://www.acmicpc.net/problem/16235)|G4|[Here](./solution/BOJ_16235_나무-재테크)                       |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
+|[나무 재테크](https://www.acmicpc.net/problem/16235)|G4|[Here](./solution/BOJ_16235_나무-재테크)                       |  -  |  -  |  O  |  -  |  -  |  -  |  -  |
 <br>
