@@ -21,7 +21,6 @@ class Tree implements Comparable<Tree> {
 		return this.age - t.age;
 	}
 }
-
 public class Main {
 	static int N, M, K;
 	static int[][] A;
