@@ -112,3 +112,28 @@ public class Main {
 		}
 	}
 
+	// 겨울
+	static void winter() {
+		for (int i = 0; i < N; i++) {
+			for (int j = 0; j < N; j++) {
+				map[i][j] += A[i][j];
+			}
+		}
+	}
+
+	static void print() {
+		for (int i = 0; i < trees.size(); i++) {
+			System.out.println(trees.get(i).x + " " + trees.get(i).y + " " + trees.get(i).age);
+		}
+	}
+
+	static void printMap() {
+		for (int i = 0; i < N; i++) {
+			for (int j = 0; j < N; j++) {
+				System.out.print(map[i][j] + " ");
+			}
+			System.out.println();
+		}
+		System.out.println();
+	}
+}
