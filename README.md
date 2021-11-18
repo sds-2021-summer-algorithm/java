@@ -109,5 +109,5 @@
 |[치즈](https://www.acmicpc.net/problem/2636)|G5|[Here](./solution/BOJ_2636_치즈)                                       |  -  |  O  |  -  |   O |  -  |  -  |  O  |
 |[나무 재테크](https://www.acmicpc.net/problem/16235)|G4|[Here](./solution/BOJ_16235_나무-재테크)                       |  -  |  O  |  O  |  -  |  -  |  -  |  O  |
 |[빙산](https://www.acmicpc.net/problem/2573)|G4|[Here](./solution/BOJ_2573_빙산)                                       |  -  |  -  |  -  |  -  |  -  |  -  |  O  |
-|[연구소 3](https://www.acmicpc.net/problem/17142)|G4|[Here](./solution/BOJ_17142_연구소-3)                             |  -  |  -  |  -  |   O  |  O  |  -  |  -  |
+|[연구소 3](https://www.acmicpc.net/problem/17142)|G4|[Here](./solution/BOJ_17142_연구소-3)                             |  -  |  -  |  -  |   O  |  O  |  -  |  O  |
 <br>
