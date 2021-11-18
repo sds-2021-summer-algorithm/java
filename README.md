@@ -102,12 +102,12 @@
 |[우주 탐사선](https://www.acmicpc.net/problem/17182)|G2|[Here](./solution/BOJ_17182_우주-탐사선)                        |  -  |  O  |  O  |  O  |  O  |  O  |  O  |
 |[내리막 길](https://www.acmicpc.net/problem/1520)|G5|[Here](./solution/BOJ_1520_내리막-길)                              |  -  |  O  |  -  |  O  |  O  |  -  |  O  |
 |[RGB거리](https://www.acmicpc.net/problem/1149)|S1|[Here](./solution/BOJ_1149_RGB거리)                                 |  -  |  O  |  O  |  O  |  O  |  -  |  O  |
-|[쉬운 계단 수](https://www.acmicpc.net/problem/10844)|S1|[Here](./solution/BOJ_10844_쉬운-계단-수)                     |  -  |  O  |  O  |  -  |  O  |  -  |  O  |
+|[쉬운 계단 수](https://www.acmicpc.net/problem/10844)|S1|[Here](./solution/BOJ_10844_쉬운-계단-수)                     |  -  |  O  |  O  |   O |  O  |  -  |  O  |
 |[회의실 배정](https://www.acmicpc.net/problem/1931)|S2|[Here](./solution/BOJ_1931_회의실배정)                          |  -  |  O  |  O  |  -  |  O  |  -  |  O  |
 |[최종 순위](https://www.acmicpc.net/problem/3665)|G1|[Here](./solution/BOJ_3665_최종순위)                              |  -  |  -  |  O  |  -  |  O  |  -  |  O  |
-|[연구소 2](https://www.acmicpc.net/problem/17141)|G5|[Here](./solution/BOJ_17141_연구소-2)                             |  -  |  O  |  O  |  -  |  O  |  -  |  O  |
+|[연구소 2](https://www.acmicpc.net/problem/17141)|G5|[Here](./solution/BOJ_17141_연구소-2)                             |  -  |  O  |  O  |   O |  O  |  -  |  O  |
 |[치즈](https://www.acmicpc.net/problem/2636)|G5|[Here](./solution/BOJ_2636_치즈)                                       |  -  |  O  |  -  |  -  |  -  |  -  |  O  |
 |[나무 재테크](https://www.acmicpc.net/problem/16235)|G4|[Here](./solution/BOJ_16235_나무-재테크)                       |  -  |  O  |  O  |  -  |  -  |  -  |  O  |
 |[빙산](https://www.acmicpc.net/problem/2573)|G4|[Here](./solution/BOJ_2573_빙산)                                       |  -  |  -  |  -  |  -  |  -  |  -  |  O  |
-|[연구소 3](https://www.acmicpc.net/problem/17142)|G4|[Here](./solution/BOJ_17142_연구소-3)                             |  -  |  -  |  -  |  -  |  O  |  -  |  -  |
+|[연구소 3](https://www.acmicpc.net/problem/17142)|G4|[Here](./solution/BOJ_17142_연구소-3)                             |  -  |  -  |  -  |   O  |  O  |  -  |  -  |
 <br>
