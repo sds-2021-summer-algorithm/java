@@ -1,40 +1,41 @@
+import java.util.*;
 import java.io.*;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.StringTokenizer;
 
-public class Main {
-    static int N,M;
-    static int[] visit;
+class Main {
+    static int N, K;
+    static int[] time = new int[100001];
     static int minTime = 987654321;
     static int count = 0;
 
-    public static void main(String[] args) throws IOException {
-        // 1. 값 입력받기
+    public static void main(String[] args) throws Exception {
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
+        StringTokenizer st;
+
+        st = new StringTokenizer(br.readLine());
         N = Integer.parseInt(st.nextToken());
-        M = Integer.parseInt(st.nextToken());
-        visit = new int[100001];
-        if (N >= M) {
-            System.out.println(0);
-        } else {
-            bfs();
-            System.out.println(minTime + "\n" + count);
+        K = Integer.parseInt(st.nextToken());
+
+        if (N >= K) {
+            System.out.println((N-K) + "\n1");
+            return;
         }
+
+        bfs();
+
+        System.out.println(minTime + "\n" + count);
     }
 
-    private static void bfs() {
-        Queue<Integer> que = new LinkedList<>();
-        que.add(N);
-        visit[N] = 1;
+    static void bfs() {
+        Queue<Integer> q = new LinkedList<Integer>();
 
-        while (!que.isEmpty()) {
-            int now = que.poll();
+        q.add(N);
+        time[N] = 1;
+
+        while (!q.isEmpty()) {
+            int now = q.poll();
 
             // now 방문 시간이 최소 시간보다 크면 뒤는 더 볼 필요 없음
-            if (minTime < visit[now]) return;
+            if (minTime < time[now]) return;
 
             for (int i=0; i<3; i++) {
                 int next;
@@ -45,17 +46,17 @@ public class Main {
 
                 if (next < 0 || next > 100000) continue;
 
-                if (next == M) {
-                    minTime = visit[now];
+                if (next == K) {
+                    minTime = time[now];
                     count++;
                 }
 
                 // 첫 방문이거나 (time[next] == 0)
                 // 이미 방문한 곳이어도 같은 시간에 방문했다면 (time[next] == time[now] + 1)
                 // 경우의 수에 추가될 수 있기 때문에 Queue 에 한번 더 넣어줌
-                if (visit[next] == 0 || visit[next] == visit[now] + 1) {
-                    que.add(next);
-                    visit[next] = visit[now] + 1;
+                if (time[next] == 0 || time[next] == time[now] + 1) {
+                    q.add(next);
+                    time[next] = time[now] + 1;
                 }
             }
         }
