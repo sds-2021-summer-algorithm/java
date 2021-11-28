@@ -112,4 +112,6 @@
 |[연구소 3](https://www.acmicpc.net/problem/17142)|G4|[Here](./solution/BOJ_17142_연구소-3)                             |  -  |  O  |  -  |   O  |  O  |  -  |  O  |
 |[배열돌리기4](https://www.acmicpc.net/problem/17406)|G4|[Here](./solution/BOJ_17406_배열돌리기)                             |  O  |  -  |  -  |   -    |  -   |  -  | -  |
 |[토마토](https://www.acmicpc.net/problem/7576)|S1|[Here](./solution/BOJ_7576_토마토)                             |  -  |  O  |  -  |   -  | - |  -  | -  |
+|[후보키](https://programmers.co.kr/learn/courses/30/lessons/42890)|Lv2|[Here](.)                             |  -  |  -  |  -  |   -    |  -   |  -  | - |
+|[구간 곱 구하기](https://www.acmicpc.net/problem/11505)|G1|[Here](.)                             |  -  |  -  |  -  |   -    |  -   |  -  | - |
 <br>
