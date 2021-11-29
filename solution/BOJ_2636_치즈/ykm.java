@@ -4,79 +4,67 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
-import java.util.LinkedList;
-import java.util.Queue;
 import java.util.StringTokenizer;
 
 public class Main {
-    static int[][] map;         // 치즈 위치
-    static int area;            // 치즈의 넓이
+    static int height;
+    static int width;
+    static int[][] cheeseShape;
+    static boolean[][] visited;
+    static int[] mx = { -1, 1, 0, 0 };
+    static int[] my = { 0, 0, -1, 1 };
+    static int cheeseArea = 0;
 
     public static void main(String[] args) throws IOException {
-	// write your code here
         System.setIn(new FileInputStream("input.txt"));
-        BufferedReader br = new BufferedReader(new InputStreamReader( System.in));
-
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         StringTokenizer st = new StringTokenizer(br.readLine());
-        int height = Integer.parseInt(st.nextToken());
-        int width = Integer.parseInt(st.nextToken());
 
-        map = new int[height][width];
-        area = height*width;
+        height = Integer.parseInt(st.nextToken());
+        width = Integer.parseInt(st.nextToken());
+        cheeseShape = new int[height][width];
 
-        for(int i = 0 ; i<height; i++){
+        for (int i = 0; i < height; i++) {
             st = new StringTokenizer(br.readLine());
-            for(int j = 0 ; j<width; j++){
-                map[i][j] = Integer.parseInt(st.nextToken());
-                if(map[i][j]==0) area--;
+            for (int j = 0; j < width; j++) {
+                cheeseShape[i][j] = Integer.parseInt(st.nextToken());
+                if(cheeseShape[i][j]==1) cheeseArea++;
             }
         }
 
-        int t = 0;
-        int answer = area;
-        while(area>0){
-            answer = area;
-            turn(height, width);
-            t ++;
+        int turn = 0;
+        int last = 0;
+        while(cheeseArea>0){
+            visited = new boolean[height][width];
+            last = cheeseArea;
+            melt(0, 0);
+            turn++;
         }
-        System.out.println(answer);
-        System.out.println(t);
-
+        System.out.println(turn);
+        System.out.println(last);
+        br.close();
     }
 
-    // 치즈가 줄어든후 넒이
-    private static void turn(int height, int width) {
-        
-        // 가장 자리에 있는 치즈의 위치를 저장
-        Queue<int[]> q = new LinkedList<int[]>();
-        
-        for(int i = 0 ; i<height-1; i++){
-            for(int j = 0 ; j<width-1; j++){
-                if(map[i][j]-map[i+1][j]!=0) {
-                    if(map[i][j]==1){
-                        q.add(new int[]{i,j});
-                    }else if(map[i+1][j]==1){
-                        q.add(new int[]{i+1, j});
-                    }
-                }else if(map[i][j]-map[i][j+1]!=0){
-                    if(map[i][j]==1){
-                        q.add(new int[]{i,j});
-                    }else if(map[i][j+1]==1){
-                        q.add(new int[]{i, j+1});
-                    }
+    // dfs
+    private static void melt(int x, int y) {
+        visited[x][y] = true;
+        for (int i = 0; i < 4; i++) {
+            int nextX = x + mx[i];
+            int nextY = y + my[i];
+
+            if (nextX < 0 || nextY < 0 || nextX >= height || nextY >= width)
+                continue;
+
+            if(!visited[nextX][nextY]){
+                
+                if (cheeseShape[nextX][nextY] == 0) { // 공기
+                    melt(nextX, nextY);
+                } else { // 치즈
+                    visited[nextX][nextY] = true;
+                    cheeseShape[nextX][nextY] = 0;
+                    cheeseArea--;
                 }
-
             }
-        }
-
-        // 저장된 위치의 치즈를 제거
-        while(!q.isEmpty()){
-            int[] current = q.poll();
-            if(map[current[0]][current[1]] == 1){
-                map[current[0]][current[1]] = 0;
-                area--;
-            }
-
         }
     }
 }
