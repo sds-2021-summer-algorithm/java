@@ -1,15 +1,11 @@
-package DAILY;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
-import java.util.Set;
+import java.util.*;
 
-class Solution2 {
+class Solution {
+    static String[][] table;
     static int columns;
     static boolean[] uniqueness;
-    static List[] minimalWith;
-    static boolean[] minimality;
+
     static boolean[] selected;
     static class Pair {
         List<Integer> keys;
@@ -18,20 +14,24 @@ class Solution2 {
             keys = new ArrayList<>();
         }
     }
+    static List<List<Integer>> compositeKeys;
+
     public int solution(String[][] relation) {
-        columns = relation[0].length;
+        table = relation;
+        columns = table[0].length;
+        compositeKeys = new ArrayList<>();
         uniqueness = new boolean[columns];
-        minimality = new boolean[columns];
-        minimalWith = new List[columns];
-        for (int i = 0; i < columns; i++) {
-            minimalWith[i] = new ArrayList<Integer>();
-        }
+
         int answer = 0;
+
+        // uniqueness 체크
         for (int i = 0; i < columns; i++) {
-            if(checkUniqueness(relation, i)) {
+            if(checkUniquenessByOne(i)) {
                 uniqueness[i] = true;
-                minimality[i] = true;
-                minimalWith[i].add(i);
+
+                List<Integer> temp = new ArrayList<>();
+                temp.add(i);
+                compositeKeys.add(temp);
                 answer++;
             }
         }
@@ -39,13 +39,14 @@ class Solution2 {
             selected = new boolean[columns];
             for (int j = 0; j < columns; j++) {
                 if(uniqueness[j]) continue;
-
+                makeCompositeKey(j, 0, i);
             }
         }
 
-        return answer;
+
+        return compositeKeys.size();
     }
-    public static void makeChunk(int now, int count, final int max) {
+    public static void makeCompositeKey(int now, int count, final int max) {
         if(count == max) {
             Pair pair = new Pair();
             for (int i = 0; i < columns; i++) {
@@ -53,32 +54,46 @@ class Solution2 {
                     pair.keys.add(i);
                 }
             }
-
+            if(checkMinimality(pair)) {
+                if(checkUniquenessByCompositeKey(pair)) {
+                    compositeKeys.add(new ArrayList<>(pair.keys));
+                }
+            }
         }
         for (int i = now; i < columns; i++) {
-            if(selected[now]) continue;
-            if(minimality[now]) continue;
-            selected[now] = true;
-            makeChunk(now, count + 1, max);
-            selected[now] = false;
+            if(selected[i]) continue;
+            if(uniqueness[i]) continue;
+            selected[i] = true;
+            makeCompositeKey(now, count + 1, max);
+            selected[i] = false;
         }
     }
 
     public static boolean checkMinimality(Pair pair) {
-
+        for (List<Integer> key : compositeKeys) {
+            if(pair.keys.containsAll(key)) {
+                return false;
+            }
+        }
+        return true;
     }
-    public static boolean checkUniqueness(String[][] relation, int column) {
+
+    public static boolean checkUniquenessByCompositeKey(Pair pair) {
+        Set<List<String>> set = new HashSet<>();
+        for (String[] row: table) {
+            List<String> temp = new ArrayList<>();
+            for (int column : pair.keys) {
+                temp.add(row[column]);
+            }
+            set.add(temp);
+        }
+        return set.size() == table.length;
+    }
+    public static boolean checkUniquenessByOne(int column) {
         Set<String> set = new HashSet<>();
-        for (String[] row : relation) {
+        for (String[] row : table) {
             set.add(row[column]);
         }
-        return set.size() == relation.length;
-    }
-}
-
-
-public class programmers_후보키 {
-    public static void main(String[] args) {
-
+        return set.size() == table.length;
     }
 }
