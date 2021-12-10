@@ -2,62 +2,62 @@ import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.io.InputStreamReader;
+import java.util.ArrayList;
 import java.util.StringTokenizer;
 
 public class Main{
 
     public static class graph{
         private int V;
-        private int[][] graph;
+        private ArrayList<int[]>[] graph;
         private boolean[] isVisited;
         private int[] indegrees;
         private int diameter = 0;
+        private int node = 0;
 
         public graph(int V){
             this.V = V;
-            graph = new int[V+1][V+1];
+            graph = new ArrayList[V+1];
             indegrees = new int [V+1];
+            for(int i = 1; i<=V; i++){
+                graph[i] = new ArrayList<int[]>();
+            }
         }
 
         public void addEdge(int from, int to, int dist){
             indegrees[from]++;
-            graph[from][to] = dist;
+            graph[from].add(new int[] {to, dist});
         }
 
         public int getDiameter(){
             return diameter;
         }
 
-        // 시작 노드가 i인 지름 구하기
-        /*
-        1. cycle 이 있는 경우?
-         */
-        public int calculateDiameter() {
-            for(int i = 1; i<=V; i++){
-                isVisited = new boolean[V+1];
-                diameter = Math.max(diameter,DFS(i,0));
-            }
-            return 0;
+        public void calculateDiameter() {
+        
+            isVisited = new boolean[V+1];
+            DFS(1,0);
+            isVisited = new boolean[V+1];
+            DFS(node,0);
         }
+  
+        public void DFS(int currentNode, int currentSum){
+            if(currentSum> diameter){
+                diameter = currentSum;
+                node = currentNode;
+            }
+            isVisited[currentNode] = true;
 
-        public int DFS(int node, int currentSum){
-
-            int max = currentSum;
-            isVisited[node] = true;
             // 현재 노드에서 방문할 다음 노드 찾기
-            for(int i = V; i>0; i--){
-                if(isVisited[i] || graph[node][i] ==0 ) continue;
-                
-                int nextNode = i;
-                int nextEdge = graph[node][nextNode];
+            int size = graph[currentNode].size();
+            for(int i = 0; i<size; i++){
+                int nextNode = graph[currentNode].get(i)[0];
+                int nextEdge = graph[currentNode].get(i)[1];
 
-                max = Math.max(max,DFS(nextNode, currentSum + nextEdge));
+                if(isVisited[nextNode]) continue;
+                DFS(nextNode, currentSum + nextEdge);
             }
-            isVisited[node] = false;
-
-            return max;
         }
-
     }
     
     public static void main(String[] args) throws IOException{
@@ -79,5 +79,4 @@ public class Main{
         graph.calculateDiameter();
         System.out.println(graph.getDiameter());
     }
-
 }
