@@ -1,0 +1,127 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.util.StringTokenizer;
+
+public class Main{
+
+    static class segtree{
+        
+        private int leafIndex = 1;  // 말단노드의 시작 index
+        private int arr[];          // 
+        private int pointer;    // add함수용
+
+        public segtree(int numCount){
+            // 2의 지수가 되도록 segtree의 node수를 정하자
+            while(leafIndex < numCount){
+                leafIndex *=2;
+            }
+            arr = new int[leafIndex*2];
+            pointer = leafIndex;
+        }
+
+        public void add(int num){
+            arr[pointer++] = num;
+        }
+    }
+
+    static class minSegtree extends segtree{
+
+        public minSegtree(int numCount) {
+            super(numCount);
+        }
+
+        public int initMinSegtree(int currentNode){
+            if(currentNode<super.leafIndex){
+                return super.arr[currentNode] = Math.min(initMinSegtree(currentNode*2), initMinSegtree(currentNode*2+1));
+            }else{
+                if(super.arr[currentNode] == 0) return 1000000001;  // 부모노드가 비어있는 노드의 값을 저장하지 않도록
+                return super.arr[currentNode];
+            }
+        }
+
+        public int smallestNum(int from, int to){ 
+            return findMin(from, to, 1, 1, super.leafIndex);
+        }
+
+        private int findMin(int from, int to, int currentNode, int start, int end) {
+            if(from<= start && end <= to) {         // 현재 노드가 보관중인 최은값을 리턴
+                return super.arr[currentNode];
+            }else if( to < start || end < from){    // 현재 노드와 관련 없음 - 문제상황을 벗어나는 큰값을 리턴
+                return 1000000001;
+            }else{                                  // 자식 노드가 보관중인 두개의 값중에서 작은 값을 리턴
+                int mid = (start + end) /2;
+                return Math.min(findMin(from, to, currentNode*2, start, mid), findMin(from, to, currentNode*2+1, mid+1, end) );
+            }
+        }
+    }
+
+    static class maxSegtree extends segtree{
+        
+        public maxSegtree(int numCount) {
+            super(numCount);
+        }
+
+        public int initMaxSegtree(int currentNode){
+            if(currentNode<super.leafIndex){
+                return super.arr[currentNode] = Math.max(initMaxSegtree(currentNode*2), initMaxSegtree(currentNode*2+1));
+            }else{
+                return super.arr[currentNode];
+            }
+        }
+
+        public int biggestNum(int from, int to){ 
+            return findMax(from, to, 1, 1, super.leafIndex);
+        }
+
+        private int findMax(int from, int to, int currentNode, int start, int end){
+            if(from<= start && end <= to) {         // 현재 노드가 보관중인 최대값을 리턴
+                return super.arr[currentNode];
+            }else if( to < start || end < from){    // 현재 노드와 관련 없음
+                return 0;
+            }else{                                  // 자식 노드가 보관중인 두개의 값중에서 큰 값을 리턴
+                int mid = (start + end) /2;
+                return Math.max(findMax(from, to, currentNode*2, start, mid), findMax(from, to, currentNode*2+1, mid+1, end) );
+            }
+        }
+    }
+    
+    public static void main(String[] args) throws IOException{
+        System.setIn(new FileInputStream("input.txt"));
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(System.out));
+        StringBuilder sb = new StringBuilder();
+        StringTokenizer st = new StringTokenizer(br.readLine());
+
+        int numCount = Integer.parseInt(st.nextToken());
+        int queryCount = Integer.parseInt(st.nextToken());
+
+        maxSegtree MaxSegtree = new maxSegtree(numCount);
+        minSegtree MinSegtree = new minSegtree(numCount);
+
+        while(numCount -- > 0){
+            int num = Integer.parseInt(br.readLine());
+            MaxSegtree.add(num);
+            MinSegtree.add(num);
+        }
+
+        MaxSegtree.initMaxSegtree(1);
+        MinSegtree.initMinSegtree(1);
+
+        while(queryCount --> 0){
+            st = new StringTokenizer(br.readLine());
+            int from = Integer.parseInt(st.nextToken());
+            int to = Integer.parseInt(st.nextToken());
+
+            sb.append(MinSegtree.smallestNum(from, to) + " " + MaxSegtree.biggestNum(from, to)+ "\n");
+        }
+        
+        bw.write(sb.toString().trim());
+        bw.flush();
+        bw.close();
+        br.close();
+    }
+}
