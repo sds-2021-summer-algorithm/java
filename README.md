@@ -114,7 +114,10 @@
 |[토마토](https://www.acmicpc.net/problem/7576)|S1|[Here](./solution/BOJ_7576_토마토)                                   |  -  |  O  |  -  |  -  |  O  |  O  |  -  |
 |[후보키](https://programmers.co.kr/learn/courses/30/lessons/42890)|Lv2|[Here](./solution/Programmers_후보키)           |  -  |  O  |  O  |  -  |  O  |  O  |  -  |
 |[구간 곱 구하기](https://www.acmicpc.net/problem/11505)|G1|[Here](.)                                                   |  -  |  O  |  O  |  -  |  O  |  -  |  -  |
-|[트리의 지름](https://www.acmicpc.net/problem/1167)|G3|[Here](./solution/BOJ_1167_트리의-지름)                        |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
-|[외판원 순회](https://www.acmicpc.net/problem/2098)|G1|[Here](./solution/BOJ_2098_외판원-순회)                        |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
-|[](https://www.acmicpc.net/problem/)|G3|[Here](./solution/)                        |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
+|[트리의 지름](https://www.acmicpc.net/problem/1167)|G3|[Here](./solution/BOJ_1167_트리의-지름)                          |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
+|[외판원 순회](https://www.acmicpc.net/problem/2098)|G1|[Here](./solution/BOJ_2098_외판원-순회)                          |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
+|[N 번째 큰 수](https://www.acmicpc.net/problem/2075)|G5|[Here](./solution/BOJ_2075_N번째-큰-수)                                    |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
+|[중앙값 구하기](https://www.acmicpc.net/problem/2696)|G2|[Here](./solution/BOJ_2696_중앙값-구하기)                                  |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
+|[](https://www.acmicpc.net/problem/)|G3|[Here](./solution/)                                                           |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
+
 <br>
