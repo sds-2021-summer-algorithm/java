@@ -116,7 +116,7 @@
 |[구간 곱 구하기](https://www.acmicpc.net/problem/11505)|G1|[Here](.)                                                   |  -  |  O  |  O  |  -  |  O  |  -  |  -  |
 |[트리의 지름](https://www.acmicpc.net/problem/1167)|G3|[Here](./solution/BOJ_1167_트리의-지름)                          |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
 |[외판원 순회](https://www.acmicpc.net/problem/2098)|G1|[Here](./solution/BOJ_2098_외판원-순회)                          |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
-|[N 번째 큰 수](https://www.acmicpc.net/problem/2075)|G5|[Here](./solution/BOJ_2075_N번째-큰수)                                    |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
+|[N 번째 큰 수](https://www.acmicpc.net/problem/2075)|G5|[Here](./solution/BOJ_2075_N번째-큰수)                                    |  -  |  -  |  -  |  -  |  -  |  -  |  O  |
 |[중앙값 구하기](https://www.acmicpc.net/problem/2696)|G2|[Here](./solution/BOJ_2696_중앙값-구하기)                                  |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
 |[](https://www.acmicpc.net/problem/)|G3|[Here](./solution/)                                                           |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
 
