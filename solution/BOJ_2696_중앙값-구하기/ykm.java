@@ -18,14 +18,10 @@ public class Main{
         int midNum; // 중위값
         int count; // 전체 숫자 개수
         PriorityQueue<Integer> big = new PriorityQueue<>(); // 현재 중위값 보다 큰값 오름차순
-        PriorityQueue<Integer> small = new PriorityQueue<>(new Comparator<Integer>() { // 현재 중위값 보다 작은값 내림차순
-            @Override
-            public int compare(Integer o1, Integer o2) {
-                return o2-o1;
-            }
-        });
+        PriorityQueue<Integer> small = new PriorityQueue<>(Comparator.reverseOrder());
 
         public MidNumArray(int M){
+            sb.append((M+1)/2+"\n");
             totalCount = M;
             count = 0;
             countNumInRow = 0;
@@ -72,7 +68,7 @@ public class Main{
                 countNumInRow = 0;
             }else{
                 if(count < totalCount) {
-                    sb.append(".");
+                    sb.append(" ");
                 }
             }
         }
