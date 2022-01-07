@@ -113,13 +113,13 @@
 |[배열돌리기4](https://www.acmicpc.net/problem/17406)|G4|[Here](./solution/BOJ_17406_배열돌리기)                        |  -  |  O  |  -  |  -  |  -  |  -  |  -  |
 |[토마토](https://www.acmicpc.net/problem/7576)|S1|[Here](./solution/BOJ_7576_토마토)                                   |  -  |  O  |  -  |  -  |  O  |  O  |  O  |
 |[후보키](https://programmers.co.kr/learn/courses/30/lessons/42890)|Lv2|[Here](./solution/Programmers_후보키)           |  -  |  O  |  O  |  -  |  O  |  O  |  -  |
-|[구간 곱 구하기](https://www.acmicpc.net/problem/11505)|G1|[Here](.)                                                   |  -  |  O  |  O  |  -  |  O  |  -  |  -  |
+|[구간 곱 구하기](https://www.acmicpc.net/problem/11505)|G1|[Here](.)                                                   |  -  |  O  |  O  |  -  |  O  |  O  |  -  |
 |[트리의 지름](https://www.acmicpc.net/problem/1167)|G3|[Here](./solution/BOJ_1167_트리의-지름)                          |  -  |  O  |  -  |  -  |  O  |  -  |  -  |
 |[외판원 순회](https://www.acmicpc.net/problem/2098)|G1|[Here](./solution/BOJ_2098_외판원-순회)                          |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
-|[N 번째 큰 수](https://www.acmicpc.net/problem/2075)|G5|[Here](./solution/BOJ_2075_N번째-큰수)                          |  -  |  O  |  -  |  -  |  O  |  -  |  O  |
-|[중앙값 구하기](https://www.acmicpc.net/problem/2696)|G2|[Here](./solution/BOJ_2696_중앙값-구하기)                      |  -  |  O  |  -  |  -  |  O  |  -  |  -  |
-|[움직이는 미로 탈출](https://www.acmicpc.net/problem/16954)|G4|[Here](./solution/BOJ_16954_움직이는-미로-구하기)         |  -  |  -  |  -  |  -  |  O  |  -  |  -  |
+|[N 번째 큰 수](https://www.acmicpc.net/problem/2075)|G5|[Here](./solution/BOJ_2075_N번째-큰수)                          |  -  |  O  |  -  |  -  |  O  |  O  |  O  |
+|[중앙값 구하기](https://www.acmicpc.net/problem/2696)|G2|[Here](./solution/BOJ_2696_중앙값-구하기)                      |  -  |  O  |  -  |  -  |  O  |  O  |  -  |
+|[움직이는 미로 탈출](https://www.acmicpc.net/problem/16954)|G4|[Here](./solution/BOJ_16954_움직이는-미로-구하기)         |  -  |  -  |  -  |  -  |  O  |  O  |  -  |
 |[벽 부수고 이동하기2](https://www.acmicpc.net/problem/14442)|G3|[Here](./solution/BOJ_14442_벽-부수고-이동하기2)         |  -  |  -  |  -  |  -  |  O  |  -  |  -  |
-|[고스택](https://www.acmicpc.net/problem/3425)|G3|[Here](./solution/BOJ_3425_고스택)                                    |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
-|[부분 문자열](https://www.acmicpc.net/problem/16916)|G3|[Here](./solution/BOJ_16916_부분-문자열)                         |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
+|[고스택](https://www.acmicpc.net/problem/3425)|G3|[Here](./solution/BOJ_3425_고스택)                                    |  -  |  -  |  -  |  -  |  -  |  O  |  -  |
+|[부분 문자열](https://www.acmicpc.net/problem/16916)|G3|[Here](./solution/BOJ_16916_부분-문자열)                         |  -  |  -  |  -  |  -  |  -  |  O  |  -  |
 <br>
