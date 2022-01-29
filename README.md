@@ -110,7 +110,7 @@
 |[나무 재테크](https://www.acmicpc.net/problem/16235)|G4|[Here](./solution/BOJ_16235_나무-재테크)                       |  -  |  O  |  O  |  -  |  O  |  -  |  O  |
 |[빙산](https://www.acmicpc.net/problem/2573)|G4|[Here](./solution/BOJ_2573_빙산)                                       |  -  |  O  |  -  |  -  |  O  |  O  |  O  |
 |[연구소 3](https://www.acmicpc.net/problem/17142)|G4|[Here](./solution/BOJ_17142_연구소-3)                             |  -  |  O  |  -  |  O  |  O  |  -  |  O  |
-|[배열돌리기4](https://www.acmicpc.net/problem/17406)|G4|[Here](./solution/BOJ_17406_배열돌리기)                        |  -  |  O  |  -  |  -  |  -  |  -  |  -  |
+|[배열돌리기4](https://www.acmicpc.net/problem/17406)|G4|[Here](./solution/BOJ_17406_배열돌리기)                        |  -  |  O  |  -  |  -  |  -  |  -  |  O  |
 |[토마토](https://www.acmicpc.net/problem/7576)|S1|[Here](./solution/BOJ_7576_토마토)                                   |  -  |  O  |  -  |  -  |  O  |  O  |  O  |
 |[후보키](https://programmers.co.kr/learn/courses/30/lessons/42890)|Lv2|[Here](./solution/Programmers_후보키)           |  -  |  O  |  O  |  -  |  O  |  O  |  -  |
 |[구간 곱 구하기](https://www.acmicpc.net/problem/11505)|G1|[Here](.)                                                   |  -  |  O  |  O  |  -  |  O  |  O  |  -  |
