@@ -124,4 +124,6 @@
 |[부분 문자열](https://www.acmicpc.net/problem/16916)|G3|[Here](./solution/BOJ_16916_부분-문자열)                         |  -  |  -  |  -  |  -  |  -  |  O  |  -  |
 |[카약과 강풍](https://www.acmicpc.net/problem/2891)|S5|[Here](./solution/BOJ_2891_카약과-강풍)                         |  -  |  -  |  -  |  -  |  -  |  O  |  -  |
 |[걷기](https://www.acmicpc.net/problem/1459)|S5|[Here](./solution/BOJ_1459_걷기)                         |  -  |  -  |  -  |  -  |  -  |  O  |  -  |
+|[시간 관리하기](https://www.acmicpc.net/problem/6068)|G5|[Here](./solution/BOJ_6068_)                         |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
+|[강의실](https://www.acmicpc.net/problem/1374)|G5|[Here](./solution/BOJ_1374_강의실)                         |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
 <br>
