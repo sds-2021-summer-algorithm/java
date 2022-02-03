@@ -120,10 +120,10 @@
 |[중앙값 구하기](https://www.acmicpc.net/problem/2696)|G2|[Here](./solution/BOJ_2696_중앙값-구하기)                      |  -  |  O  |  -  |  -  |  O  |  O  |  -  |
 |[움직이는 미로 탈출](https://www.acmicpc.net/problem/16954)|G4|[Here](./solution/BOJ_16954_움직이는-미로-구하기)         |  -  |  -  |  -  |  -  |  O  |  O  |  -  |
 |[벽 부수고 이동하기2](https://www.acmicpc.net/problem/14442)|G3|[Here](./solution/BOJ_14442_벽-부수고-이동하기2)         |  -  |  -  |  -  |  -  |  O  |  -  |  -  |
-|[고스택](https://www.acmicpc.net/problem/3425)|G3|[Here](./solution/BOJ_3425_고스택)                                    |  -  |  -  |  -  |  -  |  -  |  O  |  -  |
-|[부분 문자열](https://www.acmicpc.net/problem/16916)|G3|[Here](./solution/BOJ_16916_부분-문자열)                         |  -  |  -  |  -  |  -  |  -  |  O  |  -  |
-|[카약과 강풍](https://www.acmicpc.net/problem/2891)|S5|[Here](./solution/BOJ_2891_카약과-강풍)                         |  -  |  -  |  -  |  -  |  -  |  O  |  -  |
-|[걷기](https://www.acmicpc.net/problem/1459)|S5|[Here](./solution/BOJ_1459_걷기)                         |  -  |  -  |  -  |  -  |  -  |  O  |  -  |
-|[시간 관리하기](https://www.acmicpc.net/problem/6068)|G5|[Here](./solution/BOJ_6068_)                         |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
-|[강의실](https://www.acmicpc.net/problem/1374)|G5|[Here](./solution/BOJ_1374_강의실)                         |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
+|[고스택](https://www.acmicpc.net/problem/3425)|G3|[Here](./solution/BOJ_3425_고스택)                                   |  -  |  -  |  -  |  -  |  -  |  O  |  -  |
+|[부분 문자열](https://www.acmicpc.net/problem/16916)|G3|[Here](./solution/BOJ_16916_부분-문자열)                        |  -  |  -  |  -  |  -  |  -  |  O  |  -  |
+|[카약과 강풍](https://www.acmicpc.net/problem/2891)|S5|[Here](./solution/BOJ_2891_카약과-강풍)                          |  -  |  -  |  -  |  -  |  -  |  O  |  -  |
+|[걷기](https://www.acmicpc.net/problem/1459)|S5|[Here](./solution/BOJ_1459_걷기)                                       |  -  |  -  |  -  |  -  |  -  |  O  |  -  |
+|[시간 관리하기](https://www.acmicpc.net/problem/6068)|G5|[Here](./solution/BOJ_6068_)                                  |  -  |  -  |  -  |  -  |  -  |  O  |  -  |
+|[강의실](https://www.acmicpc.net/problem/1374)|G5|[Here](./solution/BOJ_1374_강의실)                                   |  -  |  -  |  -  |  -  |  -  |  O  |  -  |
 <br>
