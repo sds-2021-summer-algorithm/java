@@ -26,7 +26,7 @@ public class Main {
             if (inputss.equals("QUIT")) {
                 break;
             }
-//            if (inputss.equals("")) {
+//            if (inputss.equals("")) { 
 ////                System.out.println("초기화 합니다.");
 //                lit.clear();
 //                continue;
