@@ -126,6 +126,8 @@
 |[걷기](https://www.acmicpc.net/problem/1459)|S5|[Here](./solution/BOJ_1459_걷기)                                       |  -  |  O  |  -  |  -  |  -  |  O  |  -  |
 |[시간 관리하기](https://www.acmicpc.net/problem/6068)|G5|[Here](./solution/BOJ_6068_)                                  |  -  |  O  |  -  |  -  |  -  |  O  |  -  |
 |[강의실](https://www.acmicpc.net/problem/1374)|G5|[Here](./solution/BOJ_1374_강의실)                                   |  -  |  O  |  -  |  -  |  -  |  O  |  -  |
-|[마라톤1](https://www.acmicpc.net/problem/10655)|S3|[Here](./solution/BOJ_10655_마라톤1)                                   |  -  |  -  |  -  |  -  |  -  |  -  |  -  |
-|[카드2](https://www.acmicpc.net/problem/2164)|S4|[Here](./solution/BOJ_2164_카드2)                                   |  -  | -  |  -  |  -  |  -  |  -  |  -  |
+|[마라톤1](https://www.acmicpc.net/problem/10655)|S3|[Here](./solution/BOJ_10655_마라톤1)                               |  -  |  -  |  -  |  -  |  -  |  O  |  -  |
+|[카드2](https://www.acmicpc.net/problem/2164)|S4|[Here](./solution/BOJ_2164_카드2)                                     |  -  | -  |  -  |  -  |  -  |  0  |  -  |
+|[카드 정렬하기](https://www.acmicpc.net/problem/1715)|G4|[Here](./solution/BOJ_1715_카드_정렬하기)                      |  -  | -  |  -  |  -  |  -  |  -  |  -  |
+|[A와 B](https://www.acmicpc.net/problem/12904)|G5|[Here](./solution/BOJ_12904_A와_B)                                  |  -  | -  |  -  |  -  |  -  |  -  |  -  |
 <br>
